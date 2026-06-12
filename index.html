@@ -31,8 +31,8 @@
     --font:      'Inter', system-ui, -apple-system, sans-serif;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font); background: #F5F6F8; color: var(--ink); font-size: 15px; line-height: 1.65; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: var(--font); background: #F5F6F8; color: var(--ink); font-size: 15px; line-height: 1.65; overflow-x: hidden; }
 
   /* ── HEADER ── */
   header {
@@ -125,7 +125,7 @@
     border-radius:50%; font-size:12px; font-weight:700;
     display:flex; align-items:center; justify-content:center; margin-top:1px;
   }
-  .steps li .step-body { flex:1; }
+  .steps li .step-body { flex:1; min-width:0; overflow-wrap:break-word; }
   .steps li strong { display:block; margin-bottom:2px; color:var(--gray); }
 
   /* callouts */
