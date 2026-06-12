@@ -211,6 +211,65 @@
     .h-title { display:none; }
     .h-search { width:130px; }
   }
+
+  /* ── REF GATE ── */
+  .ref-gate {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:40px 24px; background:var(--danger-bg); border:2px dashed var(--danger-bdr);
+    border-radius:var(--radius); text-align:center; gap:14px; margin:8px 0;
+  }
+  .ref-gate-icon { font-size:40px; }
+  .ref-gate p { color:var(--gray); font-size:14px; margin:0; }
+  .ref-gate-btn {
+    background:var(--gray); color:var(--white); border:none; border-radius:var(--radius);
+    padding:10px 28px; font-size:14px; font-weight:600; cursor:pointer; font-family:var(--font);
+    transition:background .2s;
+  }
+  .ref-gate-btn:hover { background:var(--ink); }
+  .ref-welcome {
+    display:flex; align-items:center; gap:10px; background:var(--ok-bg);
+    border-left:4px solid var(--ok-bdr); border-radius:var(--radius);
+    padding:12px 16px; margin-bottom:16px; font-size:14px;
+  }
+  .ref-welcome strong { color:var(--gray); }
+  .ref-logout { background:none; border:1px solid var(--gray-mid); border-radius:20px;
+    padding:3px 12px; font-size:12px; color:var(--gray-mid); cursor:pointer; margin-left:auto;
+    font-family:var(--font); }
+  .ref-logout:hover { background:var(--gray-light); }
+
+  /* ── REF MODAL ── */
+  .ref-modal-overlay {
+    position:fixed; inset:0; background:rgba(28,30,36,.55); z-index:500;
+    display:flex; align-items:center; justify-content:center; padding:20px;
+  }
+  .ref-modal-box {
+    background:var(--white); border-radius:12px; padding:36px 32px;
+    width:100%; max-width:380px; box-shadow:0 20px 60px rgba(0,0,0,.2);
+  }
+  .ref-modal-box h3 { font-size:20px; color:var(--gray); margin-bottom:6px; }
+  .ref-modal-box p { font-size:14px; color:var(--gray-mid); margin-bottom:20px; }
+  .ref-modal-input {
+    width:100%; padding:11px 14px; border:1.5px solid var(--rule); border-radius:var(--radius);
+    font-size:16px; font-family:var(--font); color:var(--ink); outline:none;
+    letter-spacing:.08em; box-sizing:border-box; margin-bottom:12px;
+    transition:border-color .2s;
+  }
+  .ref-modal-input:focus { border-color:var(--teal); }
+  .ref-modal-btn {
+    width:100%; padding:12px; background:var(--teal); color:var(--white);
+    border:none; border-radius:var(--radius); font-size:15px; font-weight:700;
+    cursor:pointer; font-family:var(--font); transition:background .2s;
+  }
+  .ref-modal-btn:hover { background:var(--teal-dark); }
+  .ref-modal-btn:disabled { background:var(--teal-mid); cursor:not-allowed; }
+  .ref-modal-error {
+    margin-top:10px; color:#C0392B; font-size:13px; text-align:center; display:none;
+  }
+  .ref-modal-cancel {
+    display:block; text-align:center; margin-top:14px; font-size:13px;
+    color:var(--gray-mid); cursor:pointer; text-decoration:underline; background:none;
+    border:none; font-family:var(--font); width:100%;
+  }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -565,54 +624,69 @@
         <div class="callout danger"><div class="callout-icon">🚨</div><div class="callout-body"><strong>Verificar los vendedores asignados</strong>Siempre controlá que la auditoría esté asignada a los vendedores correctos. Si no figura ninguno o hay alguno incorrecto, informalo a Auditoría antes de cerrar el proceso.</div></div>
 
         <div class="sop-section" style="margin-top:40px; border-top:3px solid var(--danger-bdr); padding-top:24px;">
-          <div class="callout danger" style="margin-bottom:20px;"><div class="callout-icon">🔒</div><div class="callout-body"><strong>Esta sección es exclusiva para Referentes</strong>El procedimiento de robos debe ser gestionado únicamente por el Referente y/o Responsable Comercial del punto de venta. Los vendedores no deben actuar de forma independiente ante este tipo de siniestros.</div></div>
 
-          <h2>🚨 Procedimiento ante Robos en Sucursal</h2>
-
-          <div class="sop-section">
-            <h3>Acciones inmediatas en el punto de venta</h3>
-            <ol class="steps">
-              <li><div class="step-body"><strong>Contactar a Auditoría de inmediato</strong>Informar el siniestro al área de auditoría lo antes posible.</div></li>
-              <li><div class="step-body"><strong>Corte de stock</strong>Solicitar el stock del sistema antes y después del siniestro (vía Auditoría).</div></li>
-              <li><div class="step-body"><strong>Solicitar las cámaras a Sistemas</strong>Pedir acceso a las grabaciones para verificar el momento exacto del robo y guardar el video.</div></li>
-              <li><div class="step-body"><strong>Comunicarse con el Referente y Responsable Comercial del punto.</strong></div></li>
-              <li><div class="step-body"><strong>Fotografiar todo el local</strong>Tomar fotos de todos los sectores, haciendo foco en los lugares dañados o afectados por el robo.</div></li>
-            </ol>
+          <!-- Gate: visible hasta autenticarse -->
+          <div id="ref-gate" class="ref-gate">
+            <div class="ref-gate-icon">🔒</div>
+            <p><strong>Contenido exclusivo para Referentes</strong><br>Este procedimiento es de acceso restringido.<br>Los vendedores no deben actuar de forma independiente ante siniestros.</p>
+            <button class="ref-gate-btn" onclick="abrirModalRef()">Ingresar como Referente</button>
           </div>
 
-          <div class="sop-section">
-            <h3>Denuncia policial — datos a incluir</h3>
-            <ul style="padding-left:20px; line-height:2.2;">
-              <li>Inventario de lo robado</li>
-              <li>IMEI / códigos trazables de los productos</li>
-              <li>Fecha y hora exacta del siniestro</li>
-              <li>Personas presentes en el local al momento del robo</li>
-              <li>Detalle completo de la situación</li>
-              <li>Dirección del local</li>
-            </ul>
-          </div>
-
-          <div class="sop-section">
-            <h3>Mail con documentación — destinatarios</h3>
-            <p>Armar un mail con toda la documentación recopilada y enviarlo a:</p>
-            <div class="ref-grid" style="grid-template-columns:1fr 1fr; margin:12px 0;">
-              <div class="ref-card"><div class="ref-label">Carolina Gervan</div><div class="ref-value" style="font-size:13px;">cgervan@grupomeditel.com</div></div>
-              <div class="ref-card"><div class="ref-label">Mara Jaer</div><div class="ref-value" style="font-size:13px;">marajaer@grupomeditel.com</div></div>
+          <!-- Contenido protegido: oculto hasta autenticarse -->
+          <div id="ref-content" style="display:none">
+            <div id="ref-welcome" class="ref-welcome">
+              <span>✅ Acceso concedido —</span>
+              <strong id="ref-nombre-display"></strong>
+              <button class="ref-logout" onclick="cerrarSesionRef()">Cerrar sesión</button>
             </div>
-            <div class="callout info"><div class="callout-icon">📋</div><div class="callout-body">Enviar con copia al Referente y al Responsable Comercial del punto.</div></div>
-          </div>
 
-          <div class="sop-section">
-            <h3>Proceso con el seguro</h3>
-            <ol class="steps">
-              <li><div class="step-body"><strong>Armando recibe la documentación</strong>Caro o Mara reenvían la documentación a Armando, quien la envía al seguro.</div></li>
-              <li><div class="step-body"><strong>Respuesta del seguro — plazo 72 hs hábiles</strong>El seguro responde a Armando con la declaración jurada (DJ) dentro de las 72 hs hábiles de informado el siniestro.</div></li>
-              <li><div class="step-body"><strong>Contacto del perito</strong>El perito se comunica con Armando para obtener el contacto del Referente y Responsable Comercial.</div></li>
-              <li><div class="step-body"><strong>Declaración y peritaje en el punto</strong>El perito contacta al Referente o Responsable, solicita una declaración del siniestro y acuerdan una fecha para el peritaje en sucursal.</div></li>
-              <li><div class="step-body"><strong>Relevamiento y acta final</strong>En el peritaje se realizan fotos y un relevamiento para la DSJ interna del seguro. Al cierre se levanta un acta que queda en análisis. Armando informará si el siniestro se paga en forma total, parcial o no se realiza el pago.</div></li>
-            </ol>
-          </div>
+            <h2>🚨 Procedimiento ante Robos en Sucursal</h2>
 
+            <div class="sop-section">
+              <h3>Acciones inmediatas en el punto de venta</h3>
+              <ol class="steps">
+                <li><div class="step-body"><strong>Contactar a Auditoría de inmediato</strong>Informar el siniestro al área de auditoría lo antes posible.</div></li>
+                <li><div class="step-body"><strong>Corte de stock</strong>Solicitar el stock del sistema antes y después del siniestro (vía Auditoría).</div></li>
+                <li><div class="step-body"><strong>Solicitar las cámaras a Sistemas</strong>Pedir acceso a las grabaciones para verificar el momento exacto del robo y guardar el video.</div></li>
+                <li><div class="step-body"><strong>Comunicarse con el Referente y Responsable Comercial del punto.</strong></div></li>
+                <li><div class="step-body"><strong>Fotografiar todo el local</strong>Tomar fotos de todos los sectores, haciendo foco en los lugares dañados o afectados por el robo.</div></li>
+              </ol>
+            </div>
+
+            <div class="sop-section">
+              <h3>Denuncia policial — datos a incluir</h3>
+              <ul style="padding-left:20px; line-height:2.2;">
+                <li>Inventario de lo robado</li>
+                <li>IMEI / códigos trazables de los productos</li>
+                <li>Fecha y hora exacta del siniestro</li>
+                <li>Personas presentes en el local al momento del robo</li>
+                <li>Detalle completo de la situación</li>
+                <li>Dirección del local</li>
+              </ul>
+            </div>
+
+            <div class="sop-section">
+              <h3>Mail con documentación — destinatarios</h3>
+              <p>Armar un mail con toda la documentación recopilada y enviarlo a:</p>
+              <div class="ref-grid" style="grid-template-columns:1fr 1fr; margin:12px 0;">
+                <div class="ref-card"><div class="ref-label">Carolina Gervan</div><div class="ref-value" style="font-size:13px;">cgervan@grupomeditel.com</div></div>
+                <div class="ref-card"><div class="ref-label">Mara Jaer</div><div class="ref-value" style="font-size:13px;">marajaer@grupomeditel.com</div></div>
+              </div>
+              <div class="callout info"><div class="callout-icon">📋</div><div class="callout-body">Enviar con copia al Referente y al Responsable Comercial del punto.</div></div>
+            </div>
+
+            <div class="sop-section">
+              <h3>Proceso con el seguro</h3>
+              <ol class="steps">
+                <li><div class="step-body"><strong>Armando recibe la documentación</strong>Caro o Mara reenvían la documentación a Armando, quien la envía al seguro.</div></li>
+                <li><div class="step-body"><strong>Respuesta del seguro — plazo 72 hs hábiles</strong>El seguro responde a Armando con la declaración jurada (DJ) dentro de las 72 hs hábiles de informado el siniestro.</div></li>
+                <li><div class="step-body"><strong>Contacto del perito</strong>El perito se comunica con Armando para obtener el contacto del Referente y Responsable Comercial.</div></li>
+                <li><div class="step-body"><strong>Declaración y peritaje en el punto</strong>El perito contacta al Referente o Responsable, solicita una declaración del siniestro y acuerdan una fecha para el peritaje en sucursal.</div></li>
+                <li><div class="step-body"><strong>Relevamiento y acta final</strong>En el peritaje se realizan fotos y un relevamiento para la DSJ interna del seguro. Al cierre se levanta un acta que queda en análisis. Armando informará si el siniestro se paga en forma total, parcial o no se realiza el pago.</div></li>
+              </ol>
+            </div>
+
+          </div><!-- /ref-content -->
         </div>
 
       </div>
@@ -665,6 +739,18 @@
     </article>
 
   </main>
+</div>
+
+<!-- ── MODAL REFERENTES ── -->
+<div id="ref-modal" class="ref-modal-overlay" style="display:none">
+  <div class="ref-modal-box">
+    <h3>🔒 Acceso Referentes</h3>
+    <p>Ingresá tu DNI para acceder al contenido restringido.</p>
+    <input type="number" id="ref-dni-input" class="ref-modal-input" placeholder="Ej: 28456789" maxlength="10">
+    <button id="ref-login-btn" class="ref-modal-btn" onclick="loginReferente()">Ingresar</button>
+    <div id="ref-modal-error" class="ref-modal-error">DNI no reconocido. Verificá e intentá de nuevo.</div>
+    <button class="ref-modal-cancel" onclick="cerrarModalRef()">Cancelar</button>
+  </div>
 </div>
 
 <script>
@@ -724,6 +810,86 @@ document.getElementById('overlay').addEventListener('click', function() {
   document.getElementById('sidebar').classList.remove('open');
   this.classList.remove('visible');
 });
+
+// ── REFERENTES AUTH ──
+const REF_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwO6sPSL4NF3PGMx3WY5Z--6FryvscJyjZTUqppY1NvhyXJazokosDyIdaKILCRUTn1/exec';
+
+function abrirModalRef() {
+  document.getElementById('ref-modal').style.display = 'flex';
+  document.getElementById('ref-dni-input').value = '';
+  document.getElementById('ref-modal-error').style.display = 'none';
+  document.getElementById('ref-login-btn').disabled = false;
+  setTimeout(() => document.getElementById('ref-dni-input').focus(), 100);
+}
+
+function cerrarModalRef() {
+  document.getElementById('ref-modal').style.display = 'none';
+}
+
+function desbloquearSeccion(nombre) {
+  document.getElementById('ref-gate').style.display = 'none';
+  document.getElementById('ref-content').style.display = 'block';
+  document.getElementById('ref-nombre-display').textContent = nombre;
+  sessionStorage.setItem('refAuth', 'true');
+  sessionStorage.setItem('refNombre', nombre);
+}
+
+function cerrarSesionRef() {
+  sessionStorage.removeItem('refAuth');
+  sessionStorage.removeItem('refNombre');
+  document.getElementById('ref-gate').style.display = 'flex';
+  document.getElementById('ref-content').style.display = 'none';
+}
+
+async function loginReferente() {
+  const dni = document.getElementById('ref-dni-input').value.trim();
+  if (!dni) return;
+
+  const btn = document.getElementById('ref-login-btn');
+  const errorEl = document.getElementById('ref-modal-error');
+  btn.disabled = true;
+  btn.textContent = 'Verificando...';
+  errorEl.style.display = 'none';
+
+  try {
+    const res = await fetch(REF_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ dni }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      cerrarModalRef();
+      desbloquearSeccion(data.nombre);
+    } else {
+      errorEl.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Ingresar';
+    }
+  } catch {
+    errorEl.textContent = 'Error de conexión. Verificá tu internet e intentá de nuevo.';
+    errorEl.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Ingresar';
+  }
+}
+
+// Enter en el input dispara el login
+document.getElementById('ref-dni-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') loginReferente();
+});
+
+// Cerrar modal al hacer clic fuera
+document.getElementById('ref-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('ref-modal')) cerrarModalRef();
+});
+
+// Restaurar sesión si ya estaba autenticado en esta pestaña
+(function() {
+  if (sessionStorage.getItem('refAuth') === 'true') {
+    desbloquearSeccion(sessionStorage.getItem('refNombre'));
+  }
+})();
 
 renderCards();
 </script>
