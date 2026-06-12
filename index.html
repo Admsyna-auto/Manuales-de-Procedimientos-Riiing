@@ -90,7 +90,9 @@
   nav a .nav-icon { font-size:15px; flex-shrink:0; }
 
   /* ── MAIN ── */
-  main { margin-left:var(--sidebar-w); flex:1; padding:40px 48px; max-width:900px; }
+  main { margin-left:var(--sidebar-w); flex:1; padding:40px 48px; max-width:900px; min-width:0; overflow-x:hidden; }
+  .table-wrap { overflow-x:auto; margin:16px 0; }
+  .table-wrap .data-table { margin:0; }
 
   /* ── PAGES ── */
   .page { display:none; }
@@ -1005,7 +1007,7 @@
         <div class="sop-section">
           <h2><span class="sop-section-num">3</span> Cierres de Lote (tarjetas)</h2>
           <p>Para cada equipo de cobro ingresar: <strong>N° de lote</strong>, <strong>Cantidad de cupones</strong> e <strong>Importe total</strong>.</p>
-          <table class="data-table">
+          <div class="table-wrap"><table class="data-table">
             <thead><tr><th>Código sistema</th><th>Equipo</th><th>Cómo obtener el cierre</th></tr></thead>
             <tbody>
               <tr><td class="mono">POSVX690</td><td>Posnet negro (integrado)</td><td>Imprimir cierre en el equipo. Copiar N° de lote, cant. cupones y monto total.</td></tr>
@@ -1014,7 +1016,7 @@
               <tr><td class="mono">POSGETNET / POSGETPOS</td><td>Getnet (Magicpos / Smartpos)</td><td>Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos.</td></tr>
               <tr><td class="mono">POSOPENPAY</td><td>Openpay (Magicpos)</td><td>Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos.</td></tr>
             </tbody>
-          </table>
+          </table></div>
           <div class="callout warn">
             <span class="callout-icon">⚠️</span>
             <div class="callout-body"><strong>Si hay más de un Posnet</strong>Cargar el cierre de cada equipo por separado. Si se realizaron varios cierres durante el turno, detallarlos todos.</div>
