@@ -4,45 +4,153 @@
   "titulo_corto": "Nota de Crédito",
   "icono": "📄",
   "categoria": "Operaciones de Caja",
+  "eyebrow": "",
   "descripcion": "Paso a paso para emitir una NC por imei cruzado, arrepentimiento de compra o cambio por falla.",
   "keywords": "nota credito nc electronica devolucion imei factura autorizacion administracion parcial",
-  "meta": ["📄 Operaciones de Caja", "👥 Toda la sucursal", "🔑 Requiere autorización de administración"],
+  "meta": [
+    "📄 Operaciones de Caja",
+    "👥 Toda la sucursal",
+    "🔑 Requiere autorización de administración"
+  ],
   "restringido": false,
   "bloques": [
-    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿Cuándo se emite una Nota de Crédito?</strong><ul style=\"margin-top:6px;padding-left:18px;\"><li>IMEI cruzado en la factura original</li><li>Arrepentimiento de compra del cliente</li><li>Cambio por falla del equipo</li></ul>" },
-    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Siempre requiere autorización de administración</strong>Antes de emitir la NC, contactar a administración para solicitar la autorización. No se puede finalizar sin ese paso." },
-    { "type": "seccion", "numero": "1", "titulo": "Acceder a N/Crédito" },
-    { "type": "pasos", "items": [
-      { "titulo": "Seleccionar el Punto de Venta", "texto": "En la barra de menús ir a <strong>SUCURSALES</strong> → provincia → punto de venta asignado. Asegurarse de <strong>NO</strong> elegir la opción que dice \"Manual\"." },
-      { "titulo": "Ir a N/Crédito", "texto": "En el menú FACTURACIÓN, seleccionar <strong>N/Crédito</strong>." }
-    ]},
-    { "type": "seccion", "numero": "2", "titulo": "Completar datos del cliente" },
-    { "type": "pasos", "items": [
-      { "titulo": "Ingresar DNI, nombre y apellido", "texto": "Deben coincidir exactamente con los de la factura original." },
-      { "titulo": "Completar teléfono y email", "texto": "Usar los mismos datos de la factura original cuando sea posible." }
-    ]},
-    { "type": "seccion", "numero": "3", "titulo": "Vincular la factura original" },
-    { "type": "pasos", "items": [
-      { "titulo": "Usar \"Traer Art. de Fact.N/NDeb.Nro\"", "texto": "En el campo correspondiente, ingresar el número de la factura original. Los primeros 4 dígitos van en el primer cuadro y el resto en el segundo cuadro." },
-      { "titulo": "Confirmar", "texto": "El sistema importará automáticamente los artículos de la factura original." }
-    ]},
-    { "type": "seccion", "numero": "4", "titulo": "Solicitar autorización y guardar" },
-    { "type": "pasos", "items": [
-      { "titulo": "Contactar a administración", "texto": "Comunicarse con administración, dar el número de factura original y el motivo de la NC." },
-      { "titulo": "Hacer clic en \"Usar Autorización\"", "texto": "Una vez que administración aprueba, hacer clic en el botón <strong>Usar Autorización</strong>." },
-      { "titulo": "Guardar", "texto": "Hacer clic en <strong>Guardar</strong> para emitir la NC electrónica." }
-    ]},
-    { "type": "seccion", "numero": "5", "titulo": "NC parcial (un solo producto)" },
-    { "type": "parrafo", "texto": "Si solo se necesita hacer la NC de un artículo específico y no de toda la factura:" },
-    { "type": "pasos", "items": [
-      { "titulo": "Eliminar los artículos que no cambian", "texto": "Después de importar la factura original, borrar los artículos que NO son parte de la devolución. Dejar solo el que sí se devuelve." },
-      { "titulo": "Ajustar la forma de pago", "texto": "Modificar el monto para que coincida con el precio del producto de la NC." },
-      { "titulo": "Autorización y guardar", "texto": "Igual que el paso 4: autorización de administración → Usar Autorización → Guardar." }
-    ]},
-    { "type": "seccion", "numero": "", "titulo": "Después de la NC" },
-    { "type": "tarjetas", "items": [
-      { "etiqueta": "IMEI cruzado", "valor": "Re-facturar", "nota": "Emitir nueva factura con el IMEI correcto, mismo medio de pago." },
-      { "etiqueta": "Arrepentimiento / Falla", "valor": "Devolver", "nota": "Devolver el importe al cliente por el mismo medio de pago de la compra original." }
-    ]}
+    {
+      "type": "aviso",
+      "texto": "<strong>¿Cuándo se emite una Nota de Crédito?</strong><ul style=\"margin-top:6px;padding-left:18px;\"><li>IMEI cruzado en la factura original</li><li>Arrepentimiento de compra del cliente</li><li>Cambio por falla del equipo</li></ul>",
+      "estilo": "info",
+      "icono": "ℹ️"
+    },
+    {
+      "type": "aviso",
+      "texto": "<strong>Siempre requiere autorización de administración</strong>Antes de emitir la NC, contactar a administración para solicitar la autorización. No se puede finalizar sin ese paso.",
+      "estilo": "warn",
+      "icono": "⚠️"
+    },
+    {
+      "type": "seccion",
+      "numero": "1",
+      "titulo": "Acceder a N/Crédito"
+    },
+    {
+      "type": "pasos",
+      "items": [
+        {
+          "titulo": "Seleccionar el Punto de Venta",
+          "texto": "En la barra de menús ir a <strong>SUCURSALES</strong> → provincia → punto de venta asignado. Asegurarse de <strong>NO</strong> elegir la opción que dice \"Manual\"."
+        },
+        {
+          "titulo": "Ir a N/Crédito",
+          "texto": "En el menú FACTURACIÓN, seleccionar <strong>N/Crédito</strong>."
+        }
+      ]
+    },
+    {
+      "type": "seccion",
+      "numero": "2",
+      "titulo": "Completar datos del cliente"
+    },
+    {
+      "type": "pasos",
+      "items": [
+        {
+          "titulo": "Ingresar DNI, nombre y apellido",
+          "texto": "Deben coincidir exactamente con los de la factura original."
+        },
+        {
+          "titulo": "Completar teléfono y email",
+          "texto": "Usar los mismos datos de la factura original cuando sea posible."
+        }
+      ]
+    },
+    {
+      "type": "seccion",
+      "numero": "3",
+      "titulo": "Vincular la factura original"
+    },
+    {
+      "type": "pasos",
+      "items": [
+        {
+          "titulo": "Usar \"Traer Art. de Fact.N/NDeb.Nro\"",
+          "texto": "En el campo correspondiente, ingresar el número de la factura original. Los primeros 4 dígitos van en el primer cuadro y el resto en el segundo cuadro."
+        },
+        {
+          "titulo": "Confirmar",
+          "texto": "El sistema importará automáticamente los artículos de la factura original."
+        }
+      ]
+    },
+    {
+      "type": "seccion",
+      "numero": "4",
+      "titulo": "Solicitar autorización y guardar"
+    },
+    {
+      "type": "pasos",
+      "items": [
+        {
+          "titulo": "Contactar a administración",
+          "texto": "Comunicarse con administración, dar el número de factura original y el motivo de la NC."
+        },
+        {
+          "titulo": "Hacer clic en \"Usar Autorización\"",
+          "texto": "Una vez que administración aprueba, hacer clic en el botón <strong>Usar Autorización</strong>."
+        },
+        {
+          "titulo": "Guardar",
+          "texto": "Hacer clic en <strong>Guardar</strong> para emitir la NC electrónica."
+        }
+      ]
+    },
+    {
+      "type": "seccion",
+      "numero": "5",
+      "titulo": "NC parcial (un solo producto)"
+    },
+    {
+      "type": "parrafo",
+      "texto": "Si solo se necesita hacer la NC de un artículo específico y no de toda la factura:"
+    },
+    {
+      "type": "pasos",
+      "items": [
+        {
+          "titulo": "Eliminar los artículos que no cambian",
+          "texto": "Después de importar la factura original, borrar los artículos que NO son parte de la devolución. Dejar solo el que sí se devuelve."
+        },
+        {
+          "titulo": "Ajustar la forma de pago",
+          "texto": "Modificar el monto para que coincida con el precio del producto de la NC."
+        },
+        {
+          "titulo": "Autorización y guardar",
+          "texto": "Igual que el paso 4: autorización de administración → Usar Autorización → Guardar."
+        },
+        {
+          "titulo": "Precaución",
+          "texto": "No se puede realizar Nc parcial de operaciones que tengan como forma de pago los siguientes medios:\n- Mercado Pago QR \n- Transferencias\n- Prestamos"
+        }
+      ]
+    },
+    {
+      "type": "seccion",
+      "numero": "",
+      "titulo": "Después de la NC"
+    },
+    {
+      "type": "tarjetas",
+      "items": [
+        {
+          "etiqueta": "IMEI cruzado",
+          "valor": "Re-facturar",
+          "nota": "Emitir nueva factura con el IMEI correcto, mismo medio de pago."
+        },
+        {
+          "etiqueta": "Arrepentimiento / Falla",
+          "valor": "Devolver",
+          "nota": "Devolver el importe al cliente por el mismo medio de pago de la compra original."
+        }
+      ]
+    }
   ]
 }
