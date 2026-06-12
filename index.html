@@ -247,8 +247,9 @@
       <a href="#" data-target="siniestros" onclick="showPage('siniestros',this);return false;">
         <span class="nav-icon">🛡️</span> Siniestros Sancor
       </a>
+      <div class="nav-section-label">Préstamos y Créditos</div>
+      <a href="#" data-target="prestamos" onclick="showPage('prestamos',this);return false;"><span class="nav-icon">💳</span> Préstamos en sucursal</a>
       <div class="nav-section-label">Próximamente</div>
-      <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">📦</span> Préstamos y créditos</a>
       <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">🧾</span> Facturación</a>
       <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">🔐</span> Accesos y sistemas</a>
     </nav>
@@ -436,6 +437,76 @@
       </div>
     </article>
 
+    <!-- ── SOP: PRÉSTAMOS ── -->
+    <article id="prestamos" class="page">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Préstamos y Créditos<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Préstamos en sucursal</div>
+      <div class="article-header">
+        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
+        <h1 class="article-title">Préstamos en Sucursal</h1>
+        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span></div>
+      </div>
+      <div class="sop-content">
+
+        <div class="callout info"><div class="callout-icon">ℹ️</div><div class="callout-body"><strong>¿De qué trata este procedimiento?</strong>Cómo cargar un préstamo de financiera en el sistema de Riiing y utilizarlo como medio de pago en la factura. El proceso tiene dos partes: la operación en la página de la financiera y la carga en nuestro sistema.</div></div>
+
+        <h2>🎬 Video explicativo</h2>
+        <iframe
+          src="https://drive.google.com/file/d/1W4_-WCdxdRK0Ig34o9woooYaX0M_go4w/preview"
+          width="100%" height="400"
+          allow="autoplay"
+          style="border:none; border-radius:8px; margin-bottom:8px; display:block;"
+        ></iframe>
+
+        <h2>📋 Flujo general</h2>
+        <ol>
+          <li>Preevaluación del cliente en la página del <strong>multiconsulta</strong></li>
+          <li>Iniciar la operación en la página de la <strong>financiera elegida</strong></li>
+          <li>Registrar el préstamo en <strong>nuestro sistema</strong> (pasos 1 a 4 abajo)</li>
+        </ol>
+
+        <h2>⚙️ Carga en el sistema — paso a paso</h2>
+
+        <ol class="steps">
+          <li>
+            <div class="step-body">
+              <strong>Registrar el préstamo en el sistema</strong>
+              <p>Desde el cuadro inicial (donde se abre caja), hacer clic en el botón <strong>"Préstamos"</strong>. Luego clic en el botón <strong>"+"</strong> y cargar los datos del cliente que solicitó el préstamo.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-body">
+              <strong>Solicitar aprobación a la Guardia de Administración</strong>
+              <p>Comunicarse con Administración para pedir la aprobación del préstamo. Desde el área verificarán que cumpla las condiciones. Una vez aprobado, se puede continuar.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-body">
+              <strong>Abrir la factura</strong>
+              <p>Con el préstamo aprobado, abrir la factura y cargar los datos del cliente, código de vendedor y productos como habitualmente.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-body">
+              <strong>Aplicar el préstamo como medio de pago</strong>
+              <p>Hacer clic en <strong>"Forma de pago"</strong>. Buscar el botón <strong>"Préstamos"</strong> en el extremo inferior derecho de la factura, seleccionarlo y aceptar. ¡Ya se puede cerrar la factura!</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="callout warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Importante — leé antes de operar</strong>
+          <ul style="margin-top:8px; padding-left:18px; line-height:2;">
+            <li>El préstamo debe estar a <strong>nombre del titular de la factura</strong>.</li>
+            <li>Se puede combinar con tarjetas, efectivo, transferencias y plan canje, pero <strong>NO con otro préstamo</strong> (afecta el límite crediticio del cliente).</li>
+            <li>El monto del préstamo debe ser <strong>menor o igual al total de la factura</strong>, nunca mayor.</li>
+            <li>La aprobación de Atención al Cliente <strong>no finaliza la operación</strong>: hay que seguir los pasos que indique cada entidad crediticia.</li>
+          </ul>
+        </div></div>
+
+        <div class="callout ok"><div class="callout-icon">💬</div><div class="callout-body"><strong>¿Dudas?</strong> Comunicarse con Administración.</div></div>
+
+      </div>
+    </article>
+
     <!-- COMING SOON -->
     <article id="coming" class="page">
       <div class="article-header">
@@ -452,7 +523,8 @@
 <script>
 const SOPS = [
   { id:'devoluciones', title:'Devoluciones por Medio de Pago', icon:'↩️', category:'Operaciones de Caja', desc:'Efectivo, transferencia, GETPOS, Posnet/Clover, QR y anulación de créditos.', keywords:'devolucion reembolso getpos posnet clover visa mastercard naranja qr efectivo transferencia prestamo credito rapicompras 0800' },
-  { id:'siniestros', title:'Siniestros — Seguro Sancor', icon:'🛡️', category:'Seguros', desc:'Proceso completo para gestionar el uso del seguro Sancor en sucursal, incluyendo la firma del recibo.', keywords:'siniestro seguro sancor garantia voucher recibo firma administracion descuento reparacion equipo' }
+  { id:'siniestros', title:'Siniestros — Seguro Sancor', icon:'🛡️', category:'Seguros', desc:'Proceso completo para gestionar el uso del seguro Sancor en sucursal, incluyendo la firma del recibo.', keywords:'siniestro seguro sancor garantia voucher recibo firma administracion descuento reparacion equipo' },
+  { id:'prestamos', title:'Préstamos en Sucursal', icon:'💳', category:'Préstamos y Créditos', desc:'Cómo cargar un préstamo de financiera en el sistema y usarlo como medio de pago en la factura.', keywords:'prestamo credito financiera multiconsulta factura medio de pago aprobacion administracion cuotas' }
 ];
 
 function renderCards() {
