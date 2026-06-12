@@ -250,6 +250,9 @@
       </a>
       <div class="nav-section-label">Préstamos y Créditos</div>
       <a href="#" data-target="prestamos" onclick="showPage('prestamos',this);return false;"><span class="nav-icon">💳</span> Préstamos en sucursal</a>
+      <div class="nav-section-label">Stock y Auditoría</div>
+      <a href="#" data-target="auditoria" onclick="showPage('auditoria',this);return false;"><span class="nav-icon">🔍</span> Descargo de Auditoría</a>
+      <a href="#" data-target="pases" onclick="showPage('pases',this);return false;"><span class="nav-icon">🔄</span> Pases entre Sucursales</a>
       <div class="nav-section-label">Próximamente</div>
       <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">🧾</span> Facturación</a>
       <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">🔐</span> Accesos y sistemas</a>
@@ -521,6 +524,85 @@
       </div>
     </article>
 
+    <!-- ── SOP: AUDITORÍA ── -->
+    <article id="auditoria" class="page">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Stock y Auditoría<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Descargo de Auditoría</div>
+      <div class="article-header">
+        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
+        <h1 class="article-title">Descargo de Auditoría de Locales</h1>
+        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span></div>
+      </div>
+      <div class="sop-content">
+
+        <div class="callout info"><div class="callout-icon">ℹ️</div><div class="callout-body"><strong>¿Qué es la auditoría?</strong>El auditor ingresa al local, escanea la mercadería en Skylab y cruza la información con el stock del sistema para detectar diferencias. Al finalizar, se realiza el reseteo del stock dejando reflejada la cantidad real contada.</div></div>
+
+        <h2>📋 Cómo leer la planilla de auditoría</h2>
+        <table class="data-table">
+          <thead><tr><th>Columna</th><th>Qué indica</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Artículo</strong></td><td>Código del accesorio auditado</td></tr>
+            <tr><td><strong>Descripción</strong></td><td>Nombre del producto con diferencias</td></tr>
+            <tr><td><strong>Inventario</strong></td><td>Cantidad física encontrada al momento del control</td></tr>
+            <tr><td><strong>Exist. Act.</strong></td><td>Cantidad que figuraba en el sistema al momento de la auditoría</td></tr>
+            <tr><td><strong>Ajuste</strong></td><td>Diferencia entre Inventario y Exist. Act. <strong>Negativo = faltante / Positivo = sobrante</strong></td></tr>
+            <tr><td><strong>Lista de precio</strong></td><td>Precio de venta de cada producto</td></tr>
+            <tr><td><strong>Diferencia valorizada</strong></td><td>Ajuste × Lista de precio (impacto económico de la diferencia)</td></tr>
+            <tr><td><strong>Tipo de Accesorio</strong></td><td>Original, Hogar o Accesorio Genérico</td></tr>
+          </tbody>
+        </table>
+        <p>La fila <strong>TOTALES</strong> muestra la suma de todas las diferencias en unidades y en pesos. La planilla llega por mail el mismo día o al día siguiente de la auditoría. Si se realizó un viernes, se envía a más tardar el lunes siguiente.</p>
+
+        <div class="callout warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Plazo para el descargo: 72 horas</strong>Desde que se recibe la planilla, el local tiene 72 hs para presentar el descargo de cualquier diferencia encontrada.</div></div>
+
+        <h2>📤 Cómo realizar el descargo</h2>
+        <ol class="steps">
+          <li><div class="step-body"><strong>Identificar los productos con diferencia</strong>Revisá la planilla e identificá todos los artículos donde la columna <em>Ajuste</em> sea distinta de cero.</div></li>
+          <li><div class="step-body"><strong>Sacar fotos de todos los productos en stock</strong>Para cada artículo con diferencia, fotografiá la totalidad de unidades que tenés en el local, todas juntas y donde se vea claramente el artículo. Ejemplo: si hay 4 auriculares Daewoo, fotografiá los 4 juntos.</div></li>
+          <li><div class="step-body"><strong>Enviar las fotos a Auditoría</strong>Mandá las fotos por mail a <strong>auditoria@grupomeditel.com</strong> dentro de las 72 hs.</div></li>
+          <li><div class="step-body"><strong>Esperar la resolución</strong>Si desde Auditoría se confirma el error de conteo, el producto es reingresado al stock y se quita el faltante de la planilla. Recibirás la planilla actualizada por mail.</div></li>
+        </ol>
+
+        <div class="callout danger"><div class="callout-icon">🚨</div><div class="callout-body"><strong>Verificar los vendedores asignados</strong>Siempre controlá que la auditoría esté asignada a los vendedores correctos. Si no figura ninguno o hay alguno incorrecto, informalo a Auditoría antes de cerrar el proceso.</div></div>
+
+      </div>
+    </article>
+
+    <!-- ── SOP: PASES ENTRE SUCURSALES ── -->
+    <article id="pases" class="page">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Stock y Auditoría<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Pases entre Sucursales</div>
+      <div class="article-header">
+        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
+        <h1 class="article-title">Pases entre Sucursales</h1>
+        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span></div>
+      </div>
+      <div class="sop-content">
+
+        <div class="sop-section">
+          <h2><span class="sop-section-num">1</span> Confirmar pases de otras sucursales</h2>
+          <p>En el sistema, ingresá a <strong>Pases entre Sucursales → Confirmar Pases de Otras Suc.</strong> Ahí vas a ver todo lo que está en tránsito hacia tu local.</p>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Verificar físicamente</strong>Controlá lo recibido en el local contra el listado del sistema.</div></li>
+            <li><div class="step-body"><strong>Sin diferencias → Elegir y aceptar</strong>Si todo coincide, hacé clic en <strong>"Elegir"</strong> en cada producto y aceptá.</div></li>
+            <li><div class="step-body"><strong>Producto no llegó físicamente → Con problema</strong>Si el sistema lo lista pero el producto no está en el local, hacé clic en <strong>"Con problema"</strong> y describí el inconveniente.</div></li>
+            <li><div class="step-body"><strong>Cantidad diferente → Modificar Cantidad Recibida</strong>Si la cantidad recibida difiere de la declarada, corregila en la columna <strong>"Cantidad Recibida"</strong> antes de confirmar.</div></li>
+          </ol>
+        </div>
+
+        <div class="sop-section">
+          <h2><span class="sop-section-num">2</span> Pases con problema</h2>
+          <div class="callout warn"><div class="callout-icon">⏱️</div><div class="callout-body"><strong>Plazo máximo: 48 horas</strong>Tanto para errores del depósito como entre locales, hay que informar dentro de las 48 hs de recibido el pase.</div></li></div></div>
+          <table class="data-table">
+            <thead><tr><th>Origen del problema</th><th>Qué hacer</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Pase desde Depósito</strong></td><td>Informar por mail al depósito dentro de las 48 hs detallando los errores encontrados</td></tr>
+              <tr><td><strong>Pase entre locales</strong></td><td>Informar al referente para que pueda resolver el inconveniente</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </article>
+
     <!-- COMING SOON -->
     <article id="coming" class="page">
       <div class="article-header">
@@ -538,7 +620,9 @@
 const SOPS = [
   { id:'devoluciones', title:'Devoluciones por Medio de Pago', icon:'↩️', category:'Operaciones de Caja', desc:'Efectivo, transferencia, GETPOS, Posnet/Clover, QR y anulación de créditos.', keywords:'devolucion reembolso getpos posnet clover visa mastercard naranja qr efectivo transferencia prestamo credito rapicompras 0800' },
   { id:'siniestros', title:'Siniestros — Seguro Sancor', icon:'🛡️', category:'Seguros', desc:'Proceso completo para gestionar el uso del seguro Sancor en sucursal, incluyendo la firma del recibo.', keywords:'siniestro seguro sancor garantia voucher recibo firma administracion descuento reparacion equipo' },
-  { id:'prestamos', title:'Préstamos en Sucursal', icon:'💳', category:'Préstamos y Créditos', desc:'Cómo cargar un préstamo de financiera en el sistema y usarlo como medio de pago en la factura.', keywords:'prestamo credito financiera multiconsulta factura medio de pago aprobacion administracion cuotas' }
+  { id:'prestamos', title:'Préstamos en Sucursal', icon:'💳', category:'Préstamos y Créditos', desc:'Cómo cargar un préstamo de financiera en el sistema y usarlo como medio de pago en la factura.', keywords:'prestamo credito financiera multiconsulta factura medio de pago aprobacion administracion cuotas' },
+  { id:'auditoria', title:'Descargo de Auditoría', icon:'🔍', category:'Stock y Auditoría', desc:'Cómo leer la planilla de auditoría e impugnar diferencias de stock dentro de las 72 hs.', keywords:'auditoria descargo stock diferencia faltante sobrante planilla skylab inventario ajuste reset' },
+  { id:'pases', title:'Pases entre Sucursales', icon:'🔄', category:'Stock y Auditoría', desc:'Cómo confirmar pases recibidos de otras sucursales o depósito y qué hacer ante problemas.', keywords:'pase sucursal deposito transferencia stock mercaderia confirmar problema cantidad recibida' }
 ];
 
 function renderCards() {
