@@ -1,0 +1,33 @@
+{
+  "id": "cupon-descuento",
+  "titulo": "Cupón de Descuento con Autorización",
+  "titulo_corto": "Cupón de Descuento",
+  "icono": "🏷️",
+  "categoria": "Operaciones de Caja",
+  "descripcion": "Cómo aplicar el cupón de descuento con autorización del referente en Skylab y cobrar en efectivo.",
+  "keywords": "cupon descuento autorizacion referente skylab password efectivo forma de pago 5%OFFDESAU",
+  "meta": ["🏷️ Operaciones de Caja", "👥 Toda la sucursal", "🔑 Requiere autorización del referente"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿Qué es esto?</strong>El cupón de descuento con autorización es un tipo de descuento especial que requiere que el referente o encargado ingrese su contraseña en Skylab para habilitarlo. Una vez activado, el sistema solo permite cobrar en efectivo." },
+    { "type": "video", "url": "https://drive.google.com/file/d/1WEb4OSUznn8polkQOHM0h7LRDm-fxKQE/view" },
+    { "type": "seccion", "numero": "1", "titulo": "Agregar el cupón en la factura" },
+    { "type": "pasos", "items": [
+      { "titulo": "Ir a Formas de Pago", "texto": "Con los productos ya cargados en la factura, hacer clic en <strong>Formas de Pago</strong>." },
+      { "titulo": "Ingresar el código del cupón", "texto": "En el campo de cupón, escribir el código correspondiente al descuento (ej.: <code>5%OFFDESAU</code>) y confirmarlo." },
+      { "titulo": "Esperar el diálogo de autorización", "texto": "Skylab mostrará automáticamente el cuadro <strong>\"Ingrese Password de Autorización\"</strong>. En este punto interviene el referente." }
+    ]},
+    { "type": "seccion", "numero": "2", "titulo": "Autorización del referente" },
+    { "type": "pasos", "items": [
+      { "titulo": "El referente ingresa su contraseña", "texto": "Solo el referente o encargado puede tipear la contraseña en el cuadro de diálogo. El vendedor debe cederle el equipo o llamarlo al sistema." },
+      { "titulo": "Confirmar la autorización", "texto": "Al aceptar, el sistema aplica el descuento y continúa con la factura." }
+    ]},
+    { "type": "aviso", "estilo": "danger", "icono": "🚨", "texto": "<strong>Importante</strong>Nunca compartir la contraseña del referente con el vendedor. La autorización debe realizarse en persona." },
+    { "type": "seccion", "numero": "3", "titulo": "Cobro: solo efectivo" },
+    { "type": "pasos", "items": [
+      { "titulo": "El sistema bloquea otros medios de pago", "texto": "Una vez aplicado el cupón con autorización, Skylab deshabilita automáticamente las tarjetas, QR y otros medios. Solo queda habilitado el <strong>efectivo</strong>." },
+      { "titulo": "Cobrar el importe en efectivo", "texto": "Ingresar el monto recibido y finalizar la factura normalmente." }
+    ]},
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Solo efectivo</strong>Las ventas con este tipo de cupón siempre se cobran en efectivo. No se puede combinar con tarjetas ni otros medios." }
+  ]
+}

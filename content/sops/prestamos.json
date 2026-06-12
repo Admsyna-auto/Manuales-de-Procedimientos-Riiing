@@ -1,0 +1,31 @@
+{
+  "id": "prestamos",
+  "titulo": "Préstamos en Sucursal",
+  "titulo_corto": "Préstamos en sucursal",
+  "icono": "💳",
+  "categoria": "Préstamos y Créditos",
+  "descripcion": "Cómo cargar un préstamo de financiera en el sistema y usarlo como medio de pago en la factura.",
+  "keywords": "prestamo credito financiera multiconsulta factura medio de pago aprobacion administracion cuotas",
+  "meta": ["📅 Junio 2026", "🏪 Todas las sucursales"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿De qué trata este procedimiento?</strong>Cómo cargar un préstamo de financiera en el sistema de Riiing y utilizarlo como medio de pago en la factura. El proceso tiene dos partes: la operación en la página de la financiera y la carga en nuestro sistema." },
+    { "type": "titulo", "texto": "🎬 Video explicativo" },
+    { "type": "video", "url": "https://drive.google.com/file/d/1W4_-WCdxdRK0Ig34o9woooYaX0M_go4w/view" },
+    { "type": "titulo", "texto": "📋 Flujo general" },
+    { "type": "lista_numerada", "items": [
+      "Preevaluación del cliente en la página del <strong>multiconsulta</strong>",
+      "Iniciar la operación en la página de la <strong>financiera elegida</strong>",
+      "Registrar el préstamo en <strong>nuestro sistema</strong> (pasos 1 a 4 abajo)"
+    ]},
+    { "type": "titulo", "texto": "⚙️ Carga en el sistema — paso a paso" },
+    { "type": "pasos", "items": [
+      { "titulo": "Registrar el préstamo en el sistema", "texto": "Desde el cuadro inicial (donde se abre caja), hacer clic en el botón <strong>\"Préstamos\"</strong>. Luego clic en el botón <strong>\"+\"</strong> y cargar los datos del cliente que solicitó el préstamo." },
+      { "titulo": "Solicitar aprobación a la Guardia de Administración", "texto": "Comunicarse con Administración para pedir la aprobación del préstamo. Desde el área verificarán que cumpla las condiciones. Una vez aprobado, se puede continuar." },
+      { "titulo": "Abrir la factura", "texto": "Con el préstamo aprobado, abrir la factura y cargar los datos del cliente, código de vendedor y productos como habitualmente." },
+      { "titulo": "Aplicar el préstamo como medio de pago", "texto": "Hacer clic en <strong>\"Forma de pago\"</strong>. Buscar el botón <strong>\"Préstamos\"</strong> en el extremo inferior derecho de la factura, seleccionarlo y aceptar. ¡Ya se puede cerrar la factura!" }
+    ]},
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Importante — leé antes de operar</strong><ul style=\"margin-top:8px; padding-left:18px; line-height:2;\"><li>El préstamo debe estar a <strong>nombre del titular de la factura</strong>.</li><li>Se puede combinar con tarjetas, efectivo, transferencias y plan canje, pero <strong>NO con otro préstamo</strong> (afecta el límite crediticio del cliente).</li><li>El monto del préstamo debe ser <strong>menor o igual al total de la factura</strong>, nunca mayor.</li><li>La aprobación de Atención al Cliente <strong>no finaliza la operación</strong>: hay que seguir los pasos que indique cada entidad crediticia.</li></ul>" },
+    { "type": "aviso", "estilo": "ok", "icono": "💬", "texto": "<strong>¿Dudas?</strong> Comunicarse con Administración." }
+  ]
+}

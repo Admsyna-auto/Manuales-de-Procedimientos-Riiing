@@ -1,0 +1,36 @@
+{
+  "id": "garantia-bolso",
+  "titulo": "Garantía: Bolso Protegido",
+  "titulo_corto": "Garantía Bolso Protegido",
+  "icono": "👜",
+  "categoria": "Seguros",
+  "descripcion": "Cómo agregar la garantía de bolso/mochila (Bronce, Plata, Oro) en Skylab y los códigos de sistema.",
+  "keywords": "garantia bolso mochila bronce plata oro GTIA-BOLBRONCE GTIA-BOLPLATA GTIA-BOLORO skylab factura doble imprimir",
+  "meta": ["👜 Seguros", "👥 Toda la sucursal"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿Qué es el Bolso Protegido?</strong>Es una garantía exclusiva para bolsos y mochilas, disponible en 3 niveles: Bronce, Plata y Oro. Al facturarlo correctamente, Skylab imprime automáticamente el comprobante de garantía para el cliente." },
+    { "type": "titulo", "texto": "Códigos de sistema" },
+    { "type": "tabla", "columnas": ["Nivel", "Código en Skylab"], "filas": [
+      { "celdas": ["🥉 Bronce", "GTIA-BOLBRONCE"] },
+      { "celdas": ["🥈 Plata", "GTIA-BOLPLATA"] },
+      { "celdas": ["🥇 Oro", "GTIA-BOLORO"] }
+    ]},
+    { "type": "seccion", "numero": "1", "titulo": "Agregar la garantía junto con el bolso" },
+    { "type": "pasos", "items": [
+      { "titulo": "Agregar el bolso/mochila", "texto": "Cargar el producto en la factura normalmente." },
+      { "titulo": "Agregar el código de garantía", "texto": "En el campo de artículo, ingresar el código correspondiente (ej.: <code>GTIA-BOLPLATA</code>) y seleccionarlo." },
+      { "titulo": "Verificar la doble entrada", "texto": "El sistema debe mostrar el artículo de garantía <strong>dos veces</strong>: una con su precio y otra en <strong>$0</strong>. Ambas líneas son necesarias para que el comprobante de garantía se imprima." }
+    ]},
+    { "type": "aviso", "estilo": "danger", "icono": "🚨", "texto": "<strong>Crítico: siempre debe aparecer dos veces</strong>Si la garantía figura solo una vez, el comprobante no se imprime y el cliente no tendrá cobertura activa. Verificar siempre antes de finalizar la factura." },
+    { "type": "seccion", "numero": "2", "titulo": "Vender la garantía por separado" },
+    { "type": "pasos", "items": [
+      { "titulo": "Agregar el código de garantía", "texto": "Ingresar el código de garantía en la factura." },
+      { "titulo": "Agregar también el producto asociado", "texto": "Es obligatorio incluir el bolso o mochila correspondiente en la misma factura. Sin él, la garantía no se activa correctamente." },
+      { "titulo": "Verificar la doble entrada", "texto": "La garantía debe aparecer dos veces (precio + $0)." }
+    ]},
+    { "type": "seccion", "numero": "3", "titulo": "Entrega del comprobante" },
+    { "type": "parrafo", "texto": "Al finalizar la factura, Skylab imprimirá automáticamente el comprobante de garantía Bolso Protegido. Entregárselo al cliente junto con el ticket de compra." },
+    { "type": "aviso", "estilo": "ok", "icono": "✅", "texto": "<strong>Informar al cliente</strong>Explicarle que ese comprobante es la constancia de su garantía y que debe conservarlo para cualquier reclamo futuro." }
+  ]
+}

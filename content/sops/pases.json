@@ -1,0 +1,27 @@
+{
+  "id": "pases",
+  "titulo": "Pases entre Sucursales",
+  "titulo_corto": "Pases entre Sucursales",
+  "icono": "🔄",
+  "categoria": "Stock y Auditoría",
+  "descripcion": "Cómo confirmar pases recibidos de otras sucursales o depósito y qué hacer ante problemas.",
+  "keywords": "pase sucursal deposito transferencia stock mercaderia confirmar problema cantidad recibida",
+  "meta": ["📅 Junio 2026", "🏪 Todas las sucursales"],
+  "restringido": false,
+  "bloques": [
+    { "type": "seccion", "numero": "1", "titulo": "Confirmar pases de otras sucursales" },
+    { "type": "parrafo", "texto": "En el sistema, ingresá a <strong>Pases entre Sucursales → Confirmar Pases de Otras Suc.</strong> Ahí vas a ver todo lo que está en tránsito hacia tu local." },
+    { "type": "pasos", "items": [
+      { "titulo": "Verificar físicamente", "texto": "Controlá lo recibido en el local contra el listado del sistema." },
+      { "titulo": "Sin diferencias → Elegir y aceptar", "texto": "Si todo coincide, hacé clic en <strong>\"Elegir\"</strong> en cada producto y aceptá." },
+      { "titulo": "Producto no llegó físicamente → Con problema", "texto": "Si el sistema lo lista pero el producto no está en el local, hacé clic en <strong>\"Con problema\"</strong> y describí el inconveniente." },
+      { "titulo": "Cantidad diferente → Modificar Cantidad Recibida", "texto": "Si la cantidad recibida difiere de la declarada, corregila en la columna <strong>\"Cantidad Recibida\"</strong> antes de confirmar." }
+    ]},
+    { "type": "seccion", "numero": "2", "titulo": "Pases con problema" },
+    { "type": "aviso", "estilo": "warn", "icono": "⏱️", "texto": "<strong>Plazo máximo: 48 horas</strong>Tanto para errores del depósito como entre locales, hay que informar dentro de las 48 hs de recibido el pase." },
+    { "type": "tabla", "columnas": ["Origen del problema", "Qué hacer"], "filas": [
+      { "celdas": ["<strong>Pase desde Depósito</strong>", "Informar por mail al depósito dentro de las 48 hs detallando los errores encontrados"] },
+      { "celdas": ["<strong>Pase entre locales</strong>", "Informar al referente para que pueda resolver el inconveniente"] }
+    ]}
+  ]
+}

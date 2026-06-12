@@ -1,0 +1,65 @@
+{
+  "id": "facturacion",
+  "titulo": "Facturación y Medios de Pago",
+  "titulo_corto": "Facturación",
+  "icono": "🧾",
+  "categoria": "Operaciones de Caja",
+  "descripcion": "Cómo emitir facturas electrónicas y manuales y operar con todos los medios de pago disponibles.",
+  "keywords": "factura electronica manual tarjeta posnet clover getpos getnet viumi openpay qr transferencia credito efectivo dni verificacion fraude buenas practicas",
+  "meta": ["🧾 Operaciones de Caja", "👥 Toda la sucursal"],
+  "restringido": false,
+  "bloques": [
+    { "type": "seccion", "numero": "1", "titulo": "Factura Electrónica" },
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "La factura electrónica es el comprobante estándar. Se puede reimprimir y reenviar por email. <strong>Siempre usarla cuando las condiciones lo permitan.</strong>" },
+    { "type": "pasos", "items": [
+      { "titulo": "Seleccionar el Punto de Venta", "texto": "SUCURSALES → provincia → punto de venta asignado. No elegir la opción que dice \"Manual\"." },
+      { "titulo": "Ir a FACTURAS", "texto": "En el menú FACTURACIÓN, acceder a la sección FACTURAS." },
+      { "titulo": "Completar datos del cliente", "texto": "DNI, nombre, apellido, teléfono y email son obligatorios. Para Factura A: agregar dirección, código postal, provincia y verificar que sea responsable inscripto." },
+      { "titulo": "Agregar productos", "texto": "Celulares con IMEI: usar la pistola lectora en el campo IMEI para evitar cruces. Accesorios sin IMEI: ingresar en el campo ARTÍCULO y seleccionar de la lista." },
+      { "titulo": "Agregar formas de pago", "texto": "Seleccionar FORMAS DE PAGO y elegir el método: efectivo, tarjeta o combinación. Completar los detalles según el medio elegido." },
+      { "titulo": "Cobrar", "texto": "Con tarjeta: pasar el cobro por el posnet integrado antes de continuar. Con otros medios: seguir el procedimiento correspondiente." },
+      { "titulo": "Revisar y confirmar", "texto": "Verificar que todos los datos estén correctos. Hacer clic en <strong>TERMINAR</strong> y luego en <strong>ENVIAR FACTURA</strong>." },
+      { "titulo": "Imprimir o enviar por email", "texto": "Seleccionar EMAIL para enviar al cliente o PANTALLA para imprimir en el PDV." }
+    ]},
+    { "type": "seccion", "numero": "2", "titulo": "Factura Manual (emergencia)" },
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Solo en casos excepcionales</strong>Usar únicamente cuando el sistema está caído, sin internet o hay corte de luz. Tiene la misma validez legal pero no se puede reimprimir." },
+    { "type": "pasos", "items": [
+      { "titulo": "Tomar el talonario", "texto": "Usar el próximo número correlativo. Verificar que esté en blanco y autorizado." },
+      { "titulo": "Completar datos del cliente y fecha", "texto": "Nombre completo o razón social, CUIT/CUIL o DNI, domicilio y condición ante el IVA." },
+      { "titulo": "Detallar los productos", "texto": "Cantidad, descripción exacta, precio unitario y total. Para celulares: incluir el IMEI." },
+      { "titulo": "Indicar la forma de pago", "texto": "Efectivo: anotar \"EFECTIVO\". Tarjeta: tipo, lote, cupón, cuotas y monto. Otros: detallar según corresponda." },
+      { "titulo": "Entregar original al cliente", "texto": "La copia blanca es para el cliente. La amarilla o rosa queda archivada en el local." },
+      { "titulo": "Cargar en sistema cuando se restituya", "texto": "Registrar la factura manual en la sección \"Facturación Manual\", con el mismo número de comprobante." }
+    ]},
+    { "type": "seccion", "numero": "3", "titulo": "Medios de Pago" },
+    { "type": "subtitulo", "texto": "Efectivo y Transferencias" },
+    { "type": "parrafo", "texto": "Las transferencias requieren validación de administración antes de entregar el producto. El impacto puede demorar 48 a 72 hs. No entregar mercadería sin confirmación." },
+    { "type": "subtitulo", "texto": "Créditos bancarios" },
+    { "type": "parrafo", "texto": "Banco Columbia, Crédito Argentino, Santander Consumer y otros. El proceso se completa en la web de la entidad y luego se carga como forma de pago en la factura." },
+    { "type": "subtitulo", "texto": "Tarjetas — Posnet / Clover" },
+    { "type": "parrafo", "texto": "Aceptan todas las tarjetas habilitadas en el sistema. También aceptan billeteras digitales: MODO, BNA+, Cuenta DNI y Personal Pay." },
+    { "type": "subtitulo", "texto": "Tarjetas — GETPOS (GetNet)" },
+    { "type": "pasos", "items": [
+      { "titulo": "Abrir \"Payment App\"", "texto": "Ingresar a la app de cobro del equipo GetPos." },
+      { "titulo": "Deslizar o acercar la tarjeta", "texto": "Débito: pasar siempre por Posnet/Clover. Crédito: seleccionar \"Plan GetNet\"." },
+      { "titulo": "Elegir cuotas", "texto": "Sistema indica \"Promo\" → seleccionar <strong>SIN INTERÉS</strong>. Sin promo → seleccionar <strong>CON INTERÉS</strong>. Confirmar las cuotas elegidas por el cliente." }
+    ]},
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "Los bines para GetNet en el sistema son genéricos y compartidos en las condiciones comerciales del grupo." },
+    { "type": "subtitulo", "texto": "Pagos QR" },
+    { "type": "parrafo", "texto": "Se acepta QR por <strong>Posnet/Clover</strong> o por <strong>Mercado Pago integrado</strong>. No se acepta QR con GETPOS. Para Mercado Pago: colocar el bin de Mercado Pago QR y desmarcar la opción \"Enviar a Posnet\"." },
+    { "type": "subtitulo", "texto": "Toma de equipos usados" },
+    { "type": "parrafo", "texto": "Exclusivo Riiing. El valor del usado se descuenta del precio del equipo nuevo al facturar." },
+    { "type": "seccion", "numero": "4", "titulo": "Prevención de Fraude" },
+    { "type": "subtitulo", "texto": "Verificación de tarjeta" },
+    { "type": "pasos", "items": [
+      { "titulo": "", "texto": "Conservar la tarjeta del cliente hasta terminar el cobro." },
+      { "titulo": "", "texto": "Solicitar documento de identidad y verificar que sea el titular." },
+      { "titulo": "", "texto": "No aceptar tarjetas deterioradas, vencidas o con signos de adulteración." },
+      { "titulo": "", "texto": "Controlar número de tarjeta, nombre del titular, fechas de vigencia, panel de firma y código de seguridad al dorso." },
+      { "titulo": "", "texto": "Pedir al cliente que firme el ticket y verificar que la firma coincida con la de la tarjeta y el documento." },
+      { "titulo": "", "texto": "Guardar copia del ticket por posibles disputas." }
+    ]},
+    { "type": "subtitulo", "texto": "Verificación de documento" },
+    { "type": "aviso", "estilo": "danger", "icono": "🚨", "texto": "<strong>Solo DNI físico</strong>Está prohibida la venta con DNI digital. Siempre solicitar documento físico. Pedir que el cliente escriba su DNI en el cupón físico de la venta y verificar que coincida con el documento presentado." }
+  ]
+}

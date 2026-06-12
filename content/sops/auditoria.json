@@ -1,0 +1,36 @@
+{
+  "id": "auditoria",
+  "titulo": "Descargo de Auditoría de Locales",
+  "titulo_corto": "Descargo de Auditoría",
+  "icono": "🔍",
+  "categoria": "Stock y Auditoría",
+  "descripcion": "Cómo leer la planilla de auditoría e impugnar diferencias de stock dentro de las 72 hs.",
+  "keywords": "auditoria descargo stock diferencia faltante sobrante planilla skylab inventario ajuste reset",
+  "meta": ["📅 Junio 2026", "🏪 Todas las sucursales"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿Qué es la auditoría?</strong>El auditor ingresa al local, escanea la mercadería en Skylab y cruza la información con el stock del sistema para detectar diferencias. Al finalizar, se realiza el reseteo del stock dejando reflejada la cantidad real contada." },
+    { "type": "titulo", "texto": "📋 Cómo leer la planilla de auditoría" },
+    { "type": "tabla", "columnas": ["Columna", "Qué indica"], "filas": [
+      { "celdas": ["<strong>Artículo</strong>", "Código del accesorio auditado"] },
+      { "celdas": ["<strong>Descripción</strong>", "Nombre del producto con diferencias"] },
+      { "celdas": ["<strong>Inventario</strong>", "Cantidad física encontrada al momento del control"] },
+      { "celdas": ["<strong>Exist. Act.</strong>", "Cantidad que figuraba en el sistema al momento de la auditoría"] },
+      { "celdas": ["<strong>Ajuste</strong>", "Diferencia entre Inventario y Exist. Act. <strong>Negativo = faltante / Positivo = sobrante</strong>"] },
+      { "celdas": ["<strong>Lista de precio</strong>", "Precio de venta de cada producto"] },
+      { "celdas": ["<strong>Diferencia valorizada</strong>", "Ajuste × Lista de precio (impacto económico de la diferencia)"] },
+      { "celdas": ["<strong>Tipo de Accesorio</strong>", "Original, Hogar o Accesorio Genérico"] }
+    ]},
+    { "type": "parrafo", "texto": "La fila <strong>TOTALES</strong> muestra la suma de todas las diferencias en unidades y en pesos. La planilla llega por mail el mismo día o al día siguiente de la auditoría. Si se realizó un viernes, se envía a más tardar el lunes siguiente." },
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Plazo para el descargo: 72 horas</strong>Desde que se recibe la planilla, el local tiene 72 hs para presentar el descargo de cualquier diferencia encontrada." },
+    { "type": "titulo", "texto": "📤 Cómo realizar el descargo" },
+    { "type": "pasos", "items": [
+      { "titulo": "Identificar los productos con diferencia", "texto": "Revisá la planilla e identificá todos los artículos donde la columna <em>Ajuste</em> sea distinta de cero." },
+      { "titulo": "Sacar fotos de todos los productos en stock", "texto": "Para cada artículo con diferencia, fotografiá la totalidad de unidades que tenés en el local, todas juntas y donde se vea claramente el artículo. Ejemplo: si hay 4 auriculares Daewoo, fotografiá los 4 juntos." },
+      { "titulo": "Enviar las fotos a Auditoría", "texto": "Mandá las fotos por mail a <strong>auditoria@grupomeditel.com</strong> dentro de las 72 hs." },
+      { "titulo": "Esperar la resolución", "texto": "Si desde Auditoría se confirma el error de conteo, el producto es reingresado al stock y se quita el faltante de la planilla. Recibirás la planilla actualizada por mail." }
+    ]},
+    { "type": "aviso", "estilo": "danger", "icono": "🚨", "texto": "<strong>Verificar los vendedores asignados</strong>Siempre controlá que la auditoría esté asignada a los vendedores correctos. Si no figura ninguno o hay alguno incorrecto, informalo a Auditoría antes de cerrar el proceso." },
+    { "type": "aviso", "estilo": "info", "icono": "🔒", "texto": "<strong>Procedimiento de Robos — Solo Referentes</strong>Este proceso está disponible en la sección <strong>Referentes</strong> del menú lateral. Requiere autenticación con DNI." }
+  ]
+}

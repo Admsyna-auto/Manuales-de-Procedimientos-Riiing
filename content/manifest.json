@@ -1,0 +1,9 @@
+{
+  "secciones": [
+    { "etiqueta": "Operaciones de Caja", "articulos": ["devoluciones", "cupon-descuento", "nota-credito", "facturacion", "cierre-caja"] },
+    { "etiqueta": "Seguros", "articulos": ["siniestros", "garantia-bolso"] },
+    { "etiqueta": "Préstamos y Créditos", "articulos": ["prestamos"] },
+    { "etiqueta": "Stock y Auditoría", "articulos": ["auditoria", "pases"] },
+    { "etiqueta": "Referentes", "articulos": ["robos"], "restringido": true }
+  ]
+}

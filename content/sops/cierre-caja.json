@@ -1,0 +1,52 @@
+{
+  "id": "cierre-caja",
+  "titulo": "Cierre de Caja",
+  "titulo_corto": "Cierre de Caja",
+  "icono": "🔐",
+  "categoria": "Operaciones de Caja",
+  "descripcion": "Procedimiento completo al final del turno: control de efectivo, cierres de lote y facturas manuales.",
+  "keywords": "cierre caja efectivo lote cupon posnet clover viumi getnet openpay factura manual diferencia retiro",
+  "meta": ["🔐 Operaciones de Caja", "👥 Toda la sucursal", "📅 Al final de cada turno"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿Para qué sirve?</strong>Controlar que los cobros del turno coincidan con lo registrado en el sistema. Permite detectar diferencias y asegura que todas las ventas estén reflejadas correctamente." },
+    { "type": "video", "url": "https://drive.google.com/file/d/18oHVafRGYmW6KO7h6wfr9khyJmVUWjNH/view" },
+    { "type": "seccion", "numero": "1", "titulo": "Acceder al Cierre de Caja" },
+    { "type": "parrafo", "texto": "En el menú principal del sistema, hacer clic en el botón <strong>\"Cierre de Caja\"</strong>. Se abrirán cuatro secciones: Control de Efectivo, Cierres de Lote, Control de Facturas Manuales y Diferencias." },
+    { "type": "seccion", "numero": "2", "titulo": "Control de Efectivo" },
+    { "type": "tabla", "columnas": ["Campo", "¿Qué es?"], "filas": [
+      { "celdas": ["<strong>Saldo inicial</strong>", "Monto con el que se abrió caja (pendiente de depósito del día anterior)."] },
+      { "celdas": ["<strong>Efectivo facturado</strong>", "Suma del efectivo cobrado en ventas del turno."] },
+      { "celdas": ["<strong>Retiros</strong>", "Total depositado en caja fuerte durante el turno."] },
+      { "celdas": ["<strong>Efectivo facturas manuales</strong>", "Efectivo en el PDV correspondiente a facturas manuales no cargadas aún en sistema."] },
+      { "celdas": ["<strong>Diferencia de caja</strong>", "Debe corresponder al efectivo en el PDV que todavía no fue retirado."] }
+    ]},
+    { "type": "seccion", "numero": "3", "titulo": "Cierres de Lote (tarjetas)" },
+    { "type": "parrafo", "texto": "Para cada equipo de cobro ingresar: <strong>N° de lote</strong>, <strong>Cantidad de cupones</strong> e <strong>Importe total</strong>." },
+    { "type": "tabla", "columnas": ["Código sistema", "Equipo", "Cómo obtener el cierre"], "filas": [
+      { "celdas": ["POSVX690", "Posnet negro (integrado)", "Imprimir cierre en el equipo. Copiar N° de lote, cant. cupones y monto total."] },
+      { "celdas": ["POSCLOVER", "Clover", "El N° de lote se verifica en un cupón impreso. Ingresar cantidad de cupones y total del resumen de ventas."] },
+      { "celdas": ["POSVIUMI", "Viumi (Magicpos / Smartpos)", "Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos."] },
+      { "celdas": ["POSGETNET / POSGETPOS", "Getnet (Magicpos / Smartpos)", "Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos."] },
+      { "celdas": ["POSOPENPAY", "Openpay (Magicpos)", "Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos."] }
+    ]},
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Si hay más de un Posnet</strong>Cargar el cierre de cada equipo por separado. Si se realizaron varios cierres durante el turno, detallarlos todos." },
+    { "type": "seccion", "numero": "4", "titulo": "Facturas Manuales no cargadas" },
+    { "type": "parrafo", "texto": "Listar todas las facturas manuales del turno que todavía <strong>no</strong> se cargaron en el sistema. Si ya se cargaron, no incluirlas." },
+    { "type": "pasos", "items": [
+      { "titulo": "Tipo de comprobante", "texto": "Indicar si es Factura o Nota de Crédito." },
+      { "titulo": "Tipo A o B", "texto": "" },
+      { "titulo": "Punto de venta", "texto": "El que figura en el talonario manual." },
+      { "titulo": "Número de comprobante", "texto": "" },
+      { "titulo": "Importe total", "texto": "" },
+      { "titulo": "Formas de pago", "texto": "Detallar con qué se cobró el comprobante." }
+    ]},
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Notas de Crédito manuales</strong>El importe debe cargarse en <strong>negativo</strong> (con signo menos), ya que representa una devolución." },
+    { "type": "seccion", "numero": "5", "titulo": "Diferencias y cómo resolverlas" },
+    { "type": "tarjetas", "items": [
+      { "etiqueta": "Diferencia de efectivo", "valor": "Verificar retiros", "nota": "Ocurre cuando se hizo un retiro físico a caja fuerte pero no se registró en el sistema." },
+      { "etiqueta": "Diferencia en cierres de lote", "valor": "Revisar facturas", "nota": "Puede faltar detallar una factura manual o no se cargó el cierre de algún equipo de cobro." }
+    ]},
+    { "type": "aviso", "estilo": "ok", "icono": "✅", "texto": "<strong>¿Dudas?</strong>Cualquier consulta comunicarse con administración." }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "devoluciones",
+  "titulo": "Devoluciones por Medio de Pago",
+  "titulo_corto": "Devoluciones",
+  "icono": "↩️",
+  "categoria": "Operaciones de Caja",
+  "descripcion": "Efectivo, transferencia, GETPOS, Posnet/Clover, QR y anulación de créditos.",
+  "keywords": "devolucion reembolso getpos posnet clover visa mastercard naranja qr efectivo transferencia prestamo credito rapicompras 0800",
+  "meta": ["📅 Junio 2026", "🏪 Todas las sucursales"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "ok", "icono": "✅", "texto": "<strong>Regla general</strong>Ante cualquier problema con una devolución, el primer paso es siempre intentar resolver por teléfono (0800 o GETPOS). Solo si el llamado no resuelve, se carga una incidencia en la plataforma de Devoluciones Riiing." },
+    { "type": "titulo", "texto": "📋 Referencia rápida" },
+    { "type": "tarjetas", "items": [
+      { "etiqueta": "0800 Posnet", "valor": "0800-333-4421", "nota": "Op. 2 → CUIT → # → Op. 3 → Op. 2 → 30819398" },
+      { "etiqueta": "0800 Clover", "valor": "0800-222-2568", "nota": "Pedirán CUIT y CBU de Syna S.A." },
+      { "etiqueta": "GETPOS (problemas)", "valor": "+54 9 11 4400-5018", "nota": "Pedir número de gestión" },
+      { "etiqueta": "Plataforma incidencias", "valor": "admriiing.atlassian.net/.../portal/34", "nota": "" },
+      { "etiqueta": "CUIT Syna S.A.", "valor": "30-71135850-8", "nota": "" },
+      { "etiqueta": "CBU Syna S.A.", "valor": "0170473420000000123880", "nota": "" }
+    ]},
+    { "type": "seccion", "numero": "1", "titulo": "Efectivo / Transferencia" },
+    { "type": "parrafo", "texto": "Cuando la sucursal no cuenta con el efectivo necesario para devolver en el punto de venta, se gestiona una transferencia bancaria." },
+    { "type": "pasos", "items": [
+      { "titulo": "Enviar mail a devoluciones@syna.com.ar", "texto": "Adjuntar: factura original, nota de crédito en efectivo y datos bancarios del cliente." }
+    ]},
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Requisitos de la cuenta bancaria</strong>La cuenta NO debe ser una billetera virtual y debe estar a nombre del titular de la factura." },
+    { "type": "seccion", "numero": "2", "titulo": "GETPOS" },
+    { "type": "subtitulo", "texto": "Proceso normal" },
+    { "type": "pasos", "items": [
+      { "titulo": "Menú → \"Devolución\"", "texto": "Ingresar al menú principal del dispositivo." },
+      { "titulo": "Clave de comercio", "texto": "Ingresar los seis dígitos." },
+      { "titulo": "Monto y cupón", "texto": "Ingresar el monto a devolver y el número de aprobación / cupón del comprobante original." },
+      { "titulo": "Tarjeta del cliente", "texto": "El cliente debe presentar la misma tarjeta de la compra original." },
+      { "titulo": "Finalizar", "texto": "El dispositivo emite comprobantes para el comercio y el cliente." }
+    ]},
+    { "type": "aviso", "estilo": "info", "icono": "⏱️", "texto": "Plazo: la devolución se refleja en la tarjeta en un máximo de <strong>3 días hábiles</strong>, sujeto a aprobación del banco emisor." },
+    { "type": "subtitulo", "texto": "Si hay inconvenientes" },
+    { "type": "pasos", "items": [
+      { "titulo": "Llamar a GETPOS", "texto": "+54 9 11 4400-5018 y pedir asistencia para completar la operación." },
+      { "titulo": "Anotar el número de gestión", "texto": "GETPOS entregará un número identificatorio." },
+      { "titulo": "Cargar incidencia en Devoluciones Riiing", "texto": "Adjuntar el número de gestión y foto del cupón original." }
+    ]},
+    { "type": "seccion", "numero": "3", "titulo": "Posnet / Clover — Visa · Mastercard · Naranja" },
+    { "type": "subtitulo", "texto": "Paso 1 — Llamar al 0800" },
+    { "type": "tabla", "columnas": ["Dispositivo", "Número", "Opciones"], "filas": [
+      { "celdas": ["<strong>Posnet</strong>", "0800-333-4421", "Op. 2 → 30711358508 → # → Op. 3 → Op. 2 → 30819398"] },
+      { "celdas": ["<strong>Clover</strong>", "0800-222-2568", "Solicitarán CUIT y CBU de Syna S.A."] }
+    ]},
+    { "type": "parrafo", "texto": "Si el llamado resuelve, no es necesario continuar. Si persiste, pasar al Paso 2." },
+    { "type": "subtitulo", "texto": "Paso 2 — Cargar incidencia (solo si el 0800 no resuelve)" },
+    { "type": "parrafo", "texto": "<strong>Visa o Mastercard:</strong> completar el formulario y adjuntarlo en la plataforma de incidencias." },
+    { "type": "parrafo", "texto": "<strong>Tarjeta Naranja</strong> (sin formulario): cargar incidencia con DNI, importe, fecha, descripción, foto del cupón y motivo." },
+    { "type": "aviso", "estilo": "warn", "icono": "⏱️", "texto": "<strong>Plazo por formulario:</strong> entre 2 y 20 días hábiles según la entidad bancaria del cliente." },
+    { "type": "seccion", "numero": "4", "titulo": "PAGOS QR (Posnet / Clover)" },
+    { "type": "subtitulo", "texto": "Paso 1 — Llamar al 0800" },
+    { "type": "parrafo", "texto": "Seguir el mismo procedimiento de la Sección 3, Paso 1. Si se resuelve, no es necesario continuar." },
+    { "type": "subtitulo", "texto": "Paso 2a — Tarjeta asociada a billetera virtual" },
+    { "type": "pasos", "items": [
+      { "titulo": "", "texto": "Completar el formulario disponible en la plataforma de incidencias." },
+      { "titulo": "", "texto": "Adjuntarlo y cargar la incidencia en Devoluciones Riiing." }
+    ]},
+    { "type": "subtitulo", "texto": "Paso 2b — Dinero en Cuenta" },
+    { "type": "parrafo", "texto": "No es posible devolver por el mismo medio. Se realiza una transferencia bancaria previa verificación del pago. Cargar incidencia con: DNI, importe, fecha, descripción, foto del cupón, motivo y datos bancarios del cliente." },
+    { "type": "aviso", "estilo": "warn", "icono": "⏱️", "texto": "Plazo: entre <strong>2 y 20 días hábiles</strong> según el banco del cliente." },
+    { "type": "seccion", "numero": "5", "titulo": "Anulación de Préstamos / Créditos" },
+    { "type": "subtitulo", "texto": "Rapicompras" },
+    { "type": "parrafo", "texto": "Si tiene menos de 10 días, gestionar desde la página del crédito. Si hay error, notificar al soporte de Rapi y cargar ticket en la plataforma para seguimiento." },
+    { "type": "subtitulo", "texto": "Resto de créditos" },
+    { "type": "parrafo", "texto": "Cargar incidencia con: página del crédito, número de solicitud, nombre y DNI del cliente, monto, motivo, sucursal, número de factura y nota de crédito." },
+    { "type": "aviso", "estilo": "danger", "icono": "🚨", "texto": "<strong>Plazo de 10 días</strong>Las anulaciones solo pueden realizarse dentro de los 10 días desde el alta. No demorar la gestión una vez que el cliente solicita la baja." },
+    { "type": "seccion", "numero": "", "titulo": "🎫 Cómo cargar un ticket en la plataforma" },
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "Usá este proceso cada vez que el procedimiento indique \"cargar incidencia en Devoluciones Riiing\"." },
+    { "type": "pasos", "items": [
+      { "titulo": "Ingresar a la plataforma", "texto": "Abrí el siguiente enlace: <a href=\"https://admriiing.atlassian.net/servicedesk/customer/portal/34\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--teal-dark);font-weight:600;\">admriiing.atlassian.net › Portal de Devoluciones</a>" },
+      { "titulo": "Seleccionar el tipo de solicitud", "texto": "Elegí la categoría que corresponde al caso (GETPOS, Posnet/Clover, QR, Crédito, etc.)." },
+      { "titulo": "Completar los datos del cliente y la operación", "texto": "Cargá los campos obligatorios: DNI del cliente, importe, fecha de la operación, número de factura, sucursal y descripción del problema." },
+      { "titulo": "Adjuntar los archivos requeridos", "texto": "Según el caso: foto del cupón, formulario completado, nota de crédito o comprobante. Verificá que las imágenes sean legibles." },
+      { "titulo": "Enviar la solicitud", "texto": "Hacé clic en \"Enviar\". El sistema generará un número de ticket — <strong>anotalo</strong> para poder hacer seguimiento." }
+    ]},
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>Primera vez en la plataforma</strong>Si es la primera vez que usás el portal, el sistema enviará un mail de verificación a tu casilla. Confirmá tu correo para poder recibir actualizaciones del ticket." },
+    { "type": "seccion", "numero": "", "titulo": "💡 Tips — Notificaciones de seguimiento" },
+    { "type": "pasos", "items": [
+      { "titulo": "", "texto": "Ingresar al mail con el que se creó la solicitud." },
+      { "titulo": "", "texto": "Buscar el correo de <strong>Centro de ayuda &lt;jira@admriiing.atlassian.net&gt;</strong>." },
+      { "titulo": "", "texto": "Hacer clic en \"Confirmá la dirección de correo electrónico para recibir notificaciones\"." },
+      { "titulo": "", "texto": "A partir de ese momento llegarán notificaciones automáticas con el estado de cada solicitud." }
+    ]}
+  ]
+}

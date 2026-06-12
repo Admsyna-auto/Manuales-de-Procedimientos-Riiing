@@ -1,0 +1,171 @@
+backend:
+  name: github
+  repo: Admsyna-auto/Manuales-de-Procedimientos-Riiing
+  branch: main
+
+media_folder: "media"
+public_folder: "media"
+
+locale: es
+
+collections:
+  - name: sops
+    label: "Procedimientos"
+    label_singular: "Procedimiento"
+    folder: "content/sops"
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: titulo
+    slug: "{{fields.id}}"
+    summary: "{{icono}} {{titulo}}"
+    fields:
+      - { name: id, label: "ID (minúsculas, sin espacios, ej: cierre-caja)", widget: string, pattern: ["^[a-z0-9-]+$", "Solo minúsculas, números y guiones"] }
+      - { name: titulo, label: "Título del artículo", widget: string }
+      - { name: titulo_corto, label: "Título corto (para el menú lateral)", widget: string, required: false }
+      - { name: icono, label: "Ícono (emoji)", widget: string, default: "📄" }
+      - name: categoria
+        label: "Categoría"
+        widget: select
+        options: ["Operaciones de Caja", "Seguros", "Préstamos y Créditos", "Stock y Auditoría", "Referentes"]
+      - { name: eyebrow, label: "Texto sobre el título", widget: string, required: false, default: "Procedimiento Operativo Estándar" }
+      - { name: descripcion, label: "Descripción (para la tarjeta de inicio y el buscador)", widget: text }
+      - { name: keywords, label: "Palabras clave de búsqueda (separadas por espacio)", widget: text, required: false }
+      - name: meta
+        label: "Etiquetas bajo el título (ej: 📅 Junio 2026)"
+        widget: list
+        field: { name: etiqueta, label: "Etiqueta", widget: string }
+        required: false
+      - { name: restringido, label: "🔒 Solo Referentes (requiere DNI)", widget: boolean, default: false }
+      - name: bloques
+        label: "Contenido del artículo"
+        label_singular: "bloque"
+        widget: list
+        types:
+          - name: seccion
+            label: "📦 Nueva sección (tarjeta blanca con título)"
+            widget: object
+            fields:
+              - { name: numero, label: "Número (ej: 1 — dejar vacío si no lleva)", widget: string, required: false, default: "" }
+              - { name: titulo, label: "Título de la sección", widget: string, required: false, default: "" }
+          - name: titulo
+            label: "🔠 Título suelto (fuera de tarjeta)"
+            widget: object
+            fields:
+              - { name: texto, label: "Texto del título", widget: string }
+          - name: subtitulo
+            label: "🔡 Subtítulo"
+            widget: object
+            fields:
+              - { name: texto, label: "Texto del subtítulo", widget: string }
+          - name: parrafo
+            label: "✏️ Párrafo"
+            widget: object
+            fields:
+              - { name: texto, label: "Texto (se permite <strong>negrita</strong>)", widget: text }
+          - name: aviso
+            label: "💬 Aviso (recuadro de color)"
+            widget: object
+            fields:
+              - name: estilo
+                label: "Tipo"
+                widget: select
+                options:
+                  - { label: "Azul — Información", value: "info" }
+                  - { label: "Verde — OK / Regla", value: "ok" }
+                  - { label: "Amarillo — Advertencia", value: "warn" }
+                  - { label: "Rojo — Crítico", value: "danger" }
+                default: "info"
+              - { name: icono, label: "Ícono (emoji)", widget: string, default: "ℹ️" }
+              - { name: texto, label: "Texto (se permite <strong>negrita</strong>)", widget: text }
+          - name: pasos
+            label: "🪜 Pasos numerados"
+            widget: object
+            fields:
+              - name: items
+                label: "Pasos"
+                label_singular: "paso"
+                widget: list
+                fields:
+                  - { name: titulo, label: "Título del paso (opcional)", widget: string, required: false, default: "" }
+                  - { name: texto, label: "Detalle del paso", widget: text, required: false, default: "" }
+          - name: lista
+            label: "• Lista con viñetas"
+            widget: object
+            fields:
+              - name: items
+                label: "Ítems"
+                label_singular: "ítem"
+                widget: list
+                field: { name: item, label: "Texto", widget: string }
+          - name: lista_numerada
+            label: "1. Lista numerada simple"
+            widget: object
+            fields:
+              - name: items
+                label: "Ítems"
+                label_singular: "ítem"
+                widget: list
+                field: { name: item, label: "Texto", widget: string }
+          - name: tabla
+            label: "📊 Tabla"
+            widget: object
+            fields:
+              - name: columnas
+                label: "Encabezados de columna"
+                label_singular: "columna"
+                widget: list
+                field: { name: columna, label: "Encabezado", widget: string }
+              - name: filas
+                label: "Filas"
+                label_singular: "fila"
+                widget: list
+                fields:
+                  - name: celdas
+                    label: "Celdas (una por columna)"
+                    label_singular: "celda"
+                    widget: list
+                    field: { name: celda, label: "Texto", widget: string }
+          - name: video
+            label: "🎬 Video (Google Drive)"
+            widget: object
+            fields:
+              - { name: url, label: "Link del video de Drive (el de compartir)", widget: string }
+          - name: tarjetas
+            label: "🗂️ Tarjetas de referencia"
+            widget: object
+            fields:
+              - name: items
+                label: "Tarjetas"
+                label_singular: "tarjeta"
+                widget: list
+                fields:
+                  - { name: etiqueta, label: "Etiqueta (arriba)", widget: string }
+                  - { name: valor, label: "Valor (destacado)", widget: string }
+                  - { name: nota, label: "Nota (abajo, opcional)", widget: string, required: false, default: "" }
+          - name: html
+            label: "⚙️ HTML avanzado (solo si sabés lo que hacés)"
+            widget: object
+            fields:
+              - { name: codigo, label: "Código HTML", widget: text }
+
+  - name: config
+    label: "Configuración del sitio"
+    files:
+      - name: manifest
+        label: "Menú lateral (orden y categorías)"
+        file: "content/manifest.json"
+        fields:
+          - name: secciones
+            label: "Secciones del menú"
+            label_singular: "sección"
+            widget: list
+            fields:
+              - { name: etiqueta, label: "Nombre de la sección", widget: string }
+              - name: articulos
+                label: "IDs de artículos (en orden)"
+                label_singular: "artículo"
+                widget: list
+                field: { name: id, label: "ID del artículo", widget: string }
+              - { name: restringido, label: "🔒 Sección solo Referentes", widget: boolean, required: false, default: false }

@@ -1,0 +1,50 @@
+{
+  "id": "siniestros",
+  "titulo": "Siniestros — Seguro Sancor",
+  "titulo_corto": "Siniestros Sancor",
+  "icono": "🛡️",
+  "categoria": "Seguros",
+  "descripcion": "Proceso completo para gestionar el uso del seguro Sancor en sucursal, incluyendo la firma del recibo.",
+  "keywords": "siniestro seguro sancor garantia voucher recibo firma administracion descuento reparacion equipo",
+  "meta": ["📅 Junio 2026", "🏪 Todas las sucursales", "🛡️ Sancor Cooperativa de Seguros"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿Qué cubre este seguro?</strong>El seguro Sancor puede aprobar la reparación del producto o brindar al cliente un monto para la compra de un equipo en cualquiera de nuestras sucursales físicas. El monto reconocido es fijo y debe utilizarse en su totalidad para adquirir un producto de igual o mayor valor, nunca inferior." },
+    { "type": "seccion", "numero": "1", "titulo": "Proceso general del siniestro" },
+    { "type": "pasos", "items": [
+      { "titulo": "El cliente se contacta con Sancor", "texto": "A través del número de teléfono que figura en la garantía entregada al momento de la compra." },
+      { "titulo": "Sancor analiza el caso", "texto": "El seguro evalúa el siniestro y se comunica con Administración para indicar cómo proceder." },
+      { "titulo": "Resolución", "texto": "Sancor puede aprobar la reparación o bien otorgar un voucher de monto fijo para que el cliente adquiera un nuevo producto en sucursal." },
+      { "titulo": "El cliente se acerca a la sucursal", "texto": "Presenta el número de siniestro para hacer uso del voucher." }
+    ]},
+    { "type": "seccion", "numero": "2", "titulo": "Pasos a seguir en el PDV" },
+    { "type": "pasos", "items": [
+      { "titulo": "Solicitar el número de siniestro al cliente", "texto": "Es un código de <strong>9 dígitos que inicia con el número 8</strong>. Ejemplo: 8XXXXXXXX." },
+      { "titulo": "Contactar a Administración", "texto": "Comunicarse indicando la sucursal y el número de siniestro. Administración habilitará un código de descuento equivalente al número de siniestro." },
+      { "titulo": "Realizar la venta", "texto": "Procesar la venta del nuevo producto utilizando el cupón de descuento habilitado." },
+      { "titulo": "Firma del recibo — OBLIGATORIO", "texto": "Una vez finalizada la facturación, el cliente debe firmar el recibo de aceptación de Sancor.<br><br><div class=\"callout danger\" style=\"margin:8px 0 0\"><div class=\"callout-icon\">🚨</div><div class=\"callout-body\"><strong>EL CLIENTE NO PUEDE RETIRARSE HASTA HABER FIRMADO EL RECIBO.</strong></div></div>" },
+      { "titulo": "Enviar el recibo firmado a Administración", "texto": "Remitir por mail a <strong>administracion@syna.com.ar</strong> con el número de siniestro en el asunto del mail." }
+    ]},
+    { "type": "seccion", "numero": "", "titulo": "📄 Recibo de aceptación — Datos del formulario" },
+    { "type": "parrafo", "texto": "El recibo es el <em>Acuerdo Transaccional Liberatorio</em> de Sancor Seguros. Los datos que deben completarse en el formulario son:" },
+    { "type": "lista", "items": [
+      "Ciudad y fecha",
+      "Nombre, apellido y DNI del cliente",
+      "Domicilio del cliente",
+      "Monto de la indemnización (en pesos, letras y números)",
+      "Fecha del evento y número de siniestro",
+      "Nombre del comercio y titular de la orden de compra"
+    ]},
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "Una vez firmado el recibo, el cliente declara que no tiene nada más que reclamar a Sancor Seguros por ese siniestro. Verificar que todos los datos estén completos antes de que el cliente firme." },
+    { "type": "seccion", "numero": "", "titulo": "📋 Resumen rápido" },
+    { "type": "tabla", "columnas": ["Paso", "Responsable", "Acción"], "filas": [
+      { "celdas": ["1", "Cliente", "Llama a Sancor con el número de la garantía"] },
+      { "celdas": ["2", "Sancor", "Evalúa y notifica a Administración"] },
+      { "celdas": ["3", "PDV", "Solicita número de siniestro al cliente (9 dígitos, empieza en 8)"] },
+      { "celdas": ["4", "PDV", "Llama a Administración para habilitar código de descuento"] },
+      { "celdas": ["5", "PDV", "Realiza la venta con el cupón habilitado"] },
+      { "celdas": ["6", "PDV", "Hace firmar el recibo al cliente <strong>antes de que se retire</strong>"] },
+      { "celdas": ["7", "PDV", "Envía recibo firmado a administracion@syna.com.ar (asunto: número de siniestro)"] }
+    ]}
+  ]
+}

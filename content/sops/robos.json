@@ -1,0 +1,50 @@
+{
+  "id": "robos",
+  "titulo": "Robos en Sucursal",
+  "titulo_corto": "Robos en Sucursal",
+  "icono": "🚨",
+  "categoria": "Referentes",
+  "eyebrow": "🔒 Solo Referentes",
+  "descripcion": "Protocolo ante robos: acciones inmediatas, denuncia policial, documentación y proceso con el seguro.",
+  "keywords": "robo siniestro denuncia policial seguro perito auditoria camaras stock referente",
+  "meta": ["📅 Junio 2026", "🏪 Todas las sucursales"],
+  "restringido": true,
+  "bloques": [
+    { "type": "seccion", "numero": "", "titulo": "" },
+    { "type": "subtitulo", "texto": "Acciones inmediatas en el punto de venta" },
+    { "type": "pasos", "items": [
+      { "titulo": "Contactar a Auditoría de inmediato", "texto": "Informar el siniestro al área de auditoría lo antes posible." },
+      { "titulo": "Corte de stock", "texto": "Solicitar el stock del sistema antes y después del siniestro (vía Auditoría)." },
+      { "titulo": "Solicitar las cámaras a Sistemas", "texto": "Pedir acceso a las grabaciones para verificar el momento exacto del robo y guardar el video." },
+      { "titulo": "Comunicarse con el Referente y Responsable Comercial del punto.", "texto": "" },
+      { "titulo": "Fotografiar todo el local", "texto": "Tomar fotos de todos los sectores, haciendo foco en los lugares dañados o afectados por el robo." }
+    ]},
+    { "type": "seccion", "numero": "", "titulo": "" },
+    { "type": "subtitulo", "texto": "Denuncia policial — datos a incluir" },
+    { "type": "lista", "items": [
+      "Inventario de lo robado",
+      "IMEI / códigos trazables de los productos",
+      "Fecha y hora exacta del siniestro",
+      "Personas presentes en el local al momento del robo",
+      "Detalle completo de la situación",
+      "Dirección del local"
+    ]},
+    { "type": "seccion", "numero": "", "titulo": "" },
+    { "type": "subtitulo", "texto": "Mail con documentación — destinatarios" },
+    { "type": "parrafo", "texto": "Armar un mail con toda la documentación recopilada y enviarlo a:" },
+    { "type": "tarjetas", "items": [
+      { "etiqueta": "Carolina Gervan", "valor": "cgervan@grupomeditel.com", "nota": "" },
+      { "etiqueta": "Mara Jaer", "valor": "marajaer@grupomeditel.com", "nota": "" }
+    ]},
+    { "type": "aviso", "estilo": "info", "icono": "📋", "texto": "Enviar con copia al Referente y al Responsable Comercial del punto." },
+    { "type": "seccion", "numero": "", "titulo": "" },
+    { "type": "subtitulo", "texto": "Proceso con el seguro" },
+    { "type": "pasos", "items": [
+      { "titulo": "Armando recibe la documentación", "texto": "Caro o Mara reenvían la documentación a Armando, quien la envía al seguro." },
+      { "titulo": "Respuesta del seguro — plazo 72 hs hábiles", "texto": "El seguro responde a Armando con la declaración jurada (DJ) dentro de las 72 hs hábiles de informado el siniestro." },
+      { "titulo": "Contacto del perito", "texto": "El perito se comunica con Armando para obtener el contacto del Referente y Responsable Comercial." },
+      { "titulo": "Declaración y peritaje en el punto", "texto": "El perito contacta al Referente o Responsable, solicita una declaración y pactan un peritaje en sucursal." },
+      { "titulo": "Relevamiento y acta final", "texto": "En el peritaje se realizan fotos y un relevamiento para la DSJ interna del seguro. Al cierre se levanta un acta que queda en análisis. Armando informará si el siniestro se paga de forma total, parcial o no se realiza el pago." }
+    ]}
+  ]
+}

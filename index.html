@@ -323,32 +323,7 @@
 <div class="layout">
   <aside id="sidebar">
     <nav>
-      <div class="nav-section-label">Inicio</div>
-      <a href="#" class="active" data-target="home" onclick="showPage('home',this);return false;">
-        <span class="nav-icon">🏠</span> Inicio
-      </a>
-      <div class="nav-section-label">Operaciones de Caja</div>
-      <a href="#" data-target="devoluciones" onclick="showPage('devoluciones',this);return false;">
-        <span class="nav-icon">↩️</span> Devoluciones
-      </a>
-      <a href="#" data-target="cupon-descuento" onclick="showPage('cupon-descuento',this);return false;"><span class="nav-icon">🏷️</span> Cupón de Descuento</a>
-      <a href="#" data-target="nota-credito" onclick="showPage('nota-credito',this);return false;"><span class="nav-icon">📄</span> Nota de Crédito</a>
-      <a href="#" data-target="facturacion" onclick="showPage('facturacion',this);return false;"><span class="nav-icon">🧾</span> Facturación</a>
-      <a href="#" data-target="cierre-caja" onclick="showPage('cierre-caja',this);return false;"><span class="nav-icon">🔐</span> Cierre de Caja</a>
-      <div class="nav-section-label">Seguros</div>
-      <a href="#" data-target="siniestros" onclick="showPage('siniestros',this);return false;">
-        <span class="nav-icon">🛡️</span> Siniestros Sancor
-      </a>
-      <a href="#" data-target="garantia-bolso" onclick="showPage('garantia-bolso',this);return false;"><span class="nav-icon">👜</span> Garantía Bolso Protegido</a>
-      <div class="nav-section-label">Préstamos y Créditos</div>
-      <a href="#" data-target="prestamos" onclick="showPage('prestamos',this);return false;"><span class="nav-icon">💳</span> Préstamos en sucursal</a>
-      <div class="nav-section-label">Stock y Auditoría</div>
-      <a href="#" data-target="auditoria" onclick="showPage('auditoria',this);return false;"><span class="nav-icon">🔍</span> Descargo de Auditoría</a>
-      <a href="#" data-target="pases" onclick="showPage('pases',this);return false;"><span class="nav-icon">🔄</span> Pases entre Sucursales</a>
-      <div class="ref-nav-section-label">🔒 Referentes</div>
-      <a href="#" data-target="robos" class="ref-nav-link" onclick="showPage('robos',this);return false;"><span class="nav-icon">🚨</span> Robos en Sucursal</a>
-      <div class="nav-section-label">Próximamente</div>
-      <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">🔑</span> Accesos y sistemas</a>
+      <!-- El menú se genera automáticamente desde content/manifest.json -->
     </nav>
   </aside>
 
@@ -366,755 +341,8 @@
       <div class="sop-cards" id="cards-grid"></div>
     </div>
 
-    <!-- ── SOP: DEVOLUCIONES ── -->
-    <article id="devoluciones" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Devoluciones</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Devoluciones por Medio de Pago</h1>
-        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span></div>
-      </div>
-      <div class="sop-content">
-        <div class="callout ok"><div class="callout-icon">✅</div><div class="callout-body"><strong>Regla general</strong>Ante cualquier problema con una devolución, el primer paso es siempre intentar resolver por teléfono (0800 o GETPOS). Solo si el llamado no resuelve, se carga una incidencia en la plataforma de Devoluciones Riiing.</div></div>
-        <h2>📋 Referencia rápida</h2>
-        <div class="ref-grid">
-          <div class="ref-card"><div class="ref-label">0800 Posnet</div><div class="ref-value">0800-333-4421</div><div class="ref-sub">Op. 2 → CUIT → # → Op. 3 → Op. 2 → 30819398</div></div>
-          <div class="ref-card"><div class="ref-label">0800 Clover</div><div class="ref-value">0800-222-2568</div><div class="ref-sub">Pedirán CUIT y CBU de Syna S.A.</div></div>
-          <div class="ref-card"><div class="ref-label">GETPOS (problemas)</div><div class="ref-value">+54 9 11 4400-5018</div><div class="ref-sub">Pedir número de gestión</div></div>
-          <div class="ref-card"><div class="ref-label">Plataforma incidencias</div><div class="ref-value" style="font-size:12px;word-break:break-all;">admriiing.atlassian.net/.../portal/34</div></div>
-          <div class="ref-card"><div class="ref-label">CUIT Syna S.A.</div><div class="ref-value" style="font-family:monospace">30-71135850-8</div></div>
-          <div class="ref-card"><div class="ref-label">CBU Syna S.A.</div><div class="ref-value" style="font-family:monospace;font-size:13px">0170473420000000123880</div></div>
-        </div>
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">1</span> Efectivo / Transferencia</h2>
-          <p>Cuando la sucursal no cuenta con el efectivo necesario para devolver en el punto de venta, se gestiona una transferencia bancaria.</p>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Enviar mail a devoluciones@syna.com.ar</strong>Adjuntar: factura original, nota de crédito en efectivo y datos bancarios del cliente.</div></li>
-          </ol>
-          <div class="callout warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Requisitos de la cuenta bancaria</strong>La cuenta NO debe ser una billetera virtual y debe estar a nombre del titular de la factura.</div></div>
-        </div>
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">2</span> GETPOS</h2>
-          <h3>Proceso normal</h3>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Menú → "Devolución"</strong>Ingresar al menú principal del dispositivo.</div></li>
-            <li><div class="step-body"><strong>Clave de comercio</strong>Ingresar los seis dígitos.</div></li>
-            <li><div class="step-body"><strong>Monto y cupón</strong>Ingresar el monto a devolver y el número de aprobación / cupón del comprobante original.</div></li>
-            <li><div class="step-body"><strong>Tarjeta del cliente</strong>El cliente debe presentar la misma tarjeta de la compra original.</div></li>
-            <li><div class="step-body"><strong>Finalizar</strong>El dispositivo emite comprobantes para el comercio y el cliente.</div></li>
-          </ol>
-          <div class="callout info"><div class="callout-icon">⏱️</div><div class="callout-body">Plazo: la devolución se refleja en la tarjeta en un máximo de <strong>3 días hábiles</strong>, sujeto a aprobación del banco emisor.</div></div>
-          <h3>Si hay inconvenientes</h3>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Llamar a GETPOS</strong>+54 9 11 4400-5018 y pedir asistencia para completar la operación.</div></li>
-            <li><div class="step-body"><strong>Anotar el número de gestión</strong>GETPOS entregará un número identificatorio.</div></li>
-            <li><div class="step-body"><strong>Cargar incidencia en Devoluciones Riiing</strong>Adjuntar el número de gestión y foto del cupón original.</div></li>
-          </ol>
-        </div>
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">3</span> Posnet / Clover — Visa · Mastercard · Naranja</h2>
-          <h3>Paso 1 — Llamar al 0800</h3>
-          <table class="data-table">
-            <thead><tr><th>Dispositivo</th><th>Número</th><th>Opciones</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Posnet</strong></td><td class="mono">0800-333-4421</td><td>Op. 2 → 30711358508 → # → Op. 3 → Op. 2 → 30819398</td></tr>
-              <tr><td><strong>Clover</strong></td><td class="mono">0800-222-2568</td><td>Solicitarán CUIT y CBU de Syna S.A.</td></tr>
-            </tbody>
-          </table>
-          <p>Si el llamado resuelve, no es necesario continuar. Si persiste, pasar al Paso 2.</p>
-          <h3>Paso 2 — Cargar incidencia (solo si el 0800 no resuelve)</h3>
-          <p><strong>Visa o Mastercard:</strong> completar el formulario y adjuntarlo en la plataforma de incidencias.</p>
-          <p><strong>Tarjeta Naranja</strong> (sin formulario): cargar incidencia con DNI, importe, fecha, descripción, foto del cupón y motivo.</p>
-          <div class="callout warn"><div class="callout-icon">⏱️</div><div class="callout-body"><strong>Plazo por formulario:</strong> entre 2 y 20 días hábiles según la entidad bancaria del cliente.</div></div>
-        </div>
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">4</span> PAGOS QR (Posnet / Clover)</h2>
-          <h3>Paso 1 — Llamar al 0800</h3>
-          <p>Seguir el mismo procedimiento de la Sección 3, Paso 1. Si se resuelve, no es necesario continuar.</p>
-          <h3>Paso 2a — Tarjeta asociada a billetera virtual</h3>
-          <ol class="steps">
-            <li><div class="step-body">Completar el formulario disponible en la plataforma de incidencias.</div></li>
-            <li><div class="step-body">Adjuntarlo y cargar la incidencia en Devoluciones Riiing.</div></li>
-          </ol>
-          <h3>Paso 2b — Dinero en Cuenta</h3>
-          <p>No es posible devolver por el mismo medio. Se realiza una transferencia bancaria previa verificación del pago. Cargar incidencia con: DNI, importe, fecha, descripción, foto del cupón, motivo y datos bancarios del cliente.</p>
-          <div class="callout warn"><div class="callout-icon">⏱️</div><div class="callout-body">Plazo: entre <strong>2 y 20 días hábiles</strong> según el banco del cliente.</div></div>
-        </div>
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">5</span> Anulación de Préstamos / Créditos</h2>
-          <h3>Rapicompras</h3>
-          <p>Si tiene menos de 10 días, gestionar desde la página del crédito. Si hay error, notificar al soporte de Rapi y cargar ticket en la plataforma para seguimiento.</p>
-          <h3>Resto de créditos</h3>
-          <p>Cargar incidencia con: página del crédito, número de solicitud, nombre y DNI del cliente, monto, motivo, sucursal, número de factura y nota de crédito.</p>
-          <div class="callout danger"><div class="callout-icon">🚨</div><div class="callout-body"><strong>Plazo de 10 días</strong>Las anulaciones solo pueden realizarse dentro de los 10 días desde el alta. No demorar la gestión una vez que el cliente solicita la baja.</div></div>
-        </div>
-
-        <div class="sop-section">
-          <h2>🎫 Cómo cargar un ticket en la plataforma</h2>
-          <div class="callout info"><div class="callout-icon">ℹ️</div><div class="callout-body">Usá este proceso cada vez que el procedimiento indique "cargar incidencia en Devoluciones Riiing".</div></div>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Ingresar a la plataforma</strong>Abrí el siguiente enlace: <a href="https://admriiing.atlassian.net/servicedesk/customer/portal/34" target="_blank" rel="noopener" style="color:var(--teal-dark);font-weight:600;">admriiing.atlassian.net › Portal de Devoluciones</a></div></li>
-            <li><div class="step-body"><strong>Seleccionar el tipo de solicitud</strong>Elegí la categoría que corresponde al caso (GETPOS, Posnet/Clover, QR, Crédito, etc.).</div></li>
-            <li><div class="step-body"><strong>Completar los datos del cliente y la operación</strong>Cargá los campos obligatorios: DNI del cliente, importe, fecha de la operación, número de factura, sucursal y descripción del problema.</div></li>
-            <li><div class="step-body"><strong>Adjuntar los archivos requeridos</strong>Según el caso: foto del cupón, formulario completado, nota de crédito o comprobante. Verificá que las imágenes sean legibles.</div></li>
-            <li><div class="step-body"><strong>Enviar la solicitud</strong>Hacé clic en "Enviar". El sistema generará un número de ticket — <strong>anotalo</strong> para poder hacer seguimiento.</div></li>
-          </ol>
-          <div class="callout warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Primera vez en la plataforma</strong>Si es la primera vez que usás el portal, el sistema enviará un mail de verificación a tu casilla. Confirmá tu correo para poder recibir actualizaciones del ticket.</div></div>
-        </div>
-
-        <div class="sop-section">
-          <h2>💡 Tips — Notificaciones de seguimiento</h2>
-          <ol class="steps">
-            <li><div class="step-body">Ingresar al mail con el que se creó la solicitud.</div></li>
-            <li><div class="step-body">Buscar el correo de <strong>Centro de ayuda &lt;jira@admriiing.atlassian.net&gt;</strong>.</div></li>
-            <li><div class="step-body">Hacer clic en "Confirmá la dirección de correo electrónico para recibir notificaciones".</div></li>
-            <li><div class="step-body">A partir de ese momento llegarán notificaciones automáticas con el estado de cada solicitud.</div></li>
-          </ol>
-        </div>
-      </div>
-    </article>
-
-    <!-- ── SOP: SINIESTROS ── -->
-    <article id="siniestros" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Seguros<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Siniestros Sancor</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Siniestros — Seguro Sancor</h1>
-        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span><span>🛡️ Sancor Cooperativa de Seguros</span></div>
-      </div>
-      <div class="sop-content">
-
-        <div class="callout info"><div class="callout-icon">ℹ️</div><div class="callout-body"><strong>¿Qué cubre este seguro?</strong>El seguro Sancor puede aprobar la reparación del producto o brindar al cliente un monto para la compra de un equipo en cualquiera de nuestras sucursales físicas. El monto reconocido es fijo y debe utilizarse en su totalidad para adquirir un producto de igual o mayor valor, nunca inferior.</div></div>
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">1</span> Proceso general del siniestro</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>El cliente se contacta con Sancor</strong>A través del número de teléfono que figura en la garantía entregada al momento de la compra.</div></li>
-            <li><div class="step-body"><strong>Sancor analiza el caso</strong>El seguro evalúa el siniestro y se comunica con Administración para indicar cómo proceder.</div></li>
-            <li><div class="step-body"><strong>Resolución</strong>Sancor puede aprobar la reparación o bien otorgar un voucher de monto fijo para que el cliente adquiera un nuevo producto en sucursal.</div></li>
-            <li><div class="step-body"><strong>El cliente se acerca a la sucursal</strong>Presenta el número de siniestro para hacer uso del voucher.</div></li>
-          </ol>
-        </div>
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">2</span> Pasos a seguir en el PDV</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Solicitar el número de siniestro al cliente</strong>Es un código de <strong>9 dígitos que inicia con el número 8</strong>. Ejemplo: 8XXXXXXXX.</div></li>
-            <li><div class="step-body"><strong>Contactar a Administración</strong>Comunicarse indicando la sucursal y el número de siniestro. Administración habilitará un código de descuento equivalente al número de siniestro.</div></li>
-            <li><div class="step-body"><strong>Realizar la venta</strong>Procesar la venta del nuevo producto utilizando el cupón de descuento habilitado.</div></li>
-            <li><div class="step-body"><strong>Firma del recibo — OBLIGATORIO</strong>Una vez finalizada la facturación, el cliente debe firmar el recibo de aceptación de Sancor.<br><br>
-            <div class="callout danger" style="margin:8px 0 0"><div class="callout-icon">🚨</div><div class="callout-body"><strong>EL CLIENTE NO PUEDE RETIRARSE HASTA HABER FIRMADO EL RECIBO.</strong></div></div>
-            </div></li>
-            <li><div class="step-body"><strong>Enviar el recibo firmado a Administración</strong>Remitir por mail a <strong>administracion@syna.com.ar</strong> con el número de siniestro en el asunto del mail.</div></li>
-          </ol>
-        </div>
-
-        <div class="sop-section">
-          <h2>📄 Recibo de aceptación — Datos del formulario</h2>
-          <p>El recibo es el <em>Acuerdo Transaccional Liberatorio</em> de Sancor Seguros. Los datos que deben completarse en el formulario son:</p>
-          <ul>
-            <li>Ciudad y fecha</li>
-            <li>Nombre, apellido y DNI del cliente</li>
-            <li>Domicilio del cliente</li>
-            <li>Monto de la indemnización (en pesos, letras y números)</li>
-            <li>Fecha del evento y número de siniestro</li>
-            <li>Nombre del comercio y titular de la orden de compra</li>
-          </ul>
-          <div class="callout warn"><div class="callout-icon">⚠️</div><div class="callout-body">Una vez firmado el recibo, el cliente declara que no tiene nada más que reclamar a Sancor Seguros por ese siniestro. Verificar que todos los datos estén completos antes de que el cliente firme.</div></div>
-        </div>
-
-        <div class="sop-section">
-          <h2>📋 Resumen rápido</h2>
-          <table class="data-table">
-            <thead><tr><th>Paso</th><th>Responsable</th><th>Acción</th></tr></thead>
-            <tbody>
-              <tr><td>1</td><td>Cliente</td><td>Llama a Sancor con el número de la garantía</td></tr>
-              <tr><td>2</td><td>Sancor</td><td>Evalúa y notifica a Administración</td></tr>
-              <tr><td>3</td><td>PDV</td><td>Solicita número de siniestro al cliente (9 dígitos, empieza en 8)</td></tr>
-              <tr><td>4</td><td>PDV</td><td>Llama a Administración para habilitar código de descuento</td></tr>
-              <tr><td>5</td><td>PDV</td><td>Realiza la venta con el cupón habilitado</td></tr>
-              <tr><td>6</td><td>PDV</td><td>Hace firmar el recibo al cliente <strong>antes de que se retire</strong></td></tr>
-              <tr><td>7</td><td>PDV</td><td>Envía recibo firmado a administracion@syna.com.ar (asunto: número de siniestro)</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-    </article>
-
-    <!-- ── SOP: PRÉSTAMOS ── -->
-    <article id="prestamos" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Préstamos y Créditos<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Préstamos en sucursal</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Préstamos en Sucursal</h1>
-        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span></div>
-      </div>
-      <div class="sop-content">
-
-        <div class="callout info"><div class="callout-icon">ℹ️</div><div class="callout-body"><strong>¿De qué trata este procedimiento?</strong>Cómo cargar un préstamo de financiera en el sistema de Riiing y utilizarlo como medio de pago en la factura. El proceso tiene dos partes: la operación en la página de la financiera y la carga en nuestro sistema.</div></div>
-
-        <h2>🎬 Video explicativo</h2>
-        <iframe
-          src="https://drive.google.com/file/d/1W4_-WCdxdRK0Ig34o9woooYaX0M_go4w/preview"
-          width="100%" height="400"
-          allow="autoplay"
-          style="border:none; border-radius:8px; margin-bottom:8px; display:block;"
-        ></iframe>
-
-        <h2>📋 Flujo general</h2>
-        <ol>
-          <li>Preevaluación del cliente en la página del <strong>multiconsulta</strong></li>
-          <li>Iniciar la operación en la página de la <strong>financiera elegida</strong></li>
-          <li>Registrar el préstamo en <strong>nuestro sistema</strong> (pasos 1 a 4 abajo)</li>
-        </ol>
-
-        <h2>⚙️ Carga en el sistema — paso a paso</h2>
-
-        <ol class="steps">
-          <li>
-            <div class="step-body">
-              <strong>Registrar el préstamo en el sistema</strong>
-              <p>Desde el cuadro inicial (donde se abre caja), hacer clic en el botón <strong>"Préstamos"</strong>. Luego clic en el botón <strong>"+"</strong> y cargar los datos del cliente que solicitó el préstamo.</p>
-            </div>
-          </li>
-          <li>
-            <div class="step-body">
-              <strong>Solicitar aprobación a la Guardia de Administración</strong>
-              <p>Comunicarse con Administración para pedir la aprobación del préstamo. Desde el área verificarán que cumpla las condiciones. Una vez aprobado, se puede continuar.</p>
-            </div>
-          </li>
-          <li>
-            <div class="step-body">
-              <strong>Abrir la factura</strong>
-              <p>Con el préstamo aprobado, abrir la factura y cargar los datos del cliente, código de vendedor y productos como habitualmente.</p>
-            </div>
-          </li>
-          <li>
-            <div class="step-body">
-              <strong>Aplicar el préstamo como medio de pago</strong>
-              <p>Hacer clic en <strong>"Forma de pago"</strong>. Buscar el botón <strong>"Préstamos"</strong> en el extremo inferior derecho de la factura, seleccionarlo y aceptar. ¡Ya se puede cerrar la factura!</p>
-            </div>
-          </li>
-        </ol>
-
-        <div class="callout warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Importante — leé antes de operar</strong>
-          <ul style="margin-top:8px; padding-left:18px; line-height:2;">
-            <li>El préstamo debe estar a <strong>nombre del titular de la factura</strong>.</li>
-            <li>Se puede combinar con tarjetas, efectivo, transferencias y plan canje, pero <strong>NO con otro préstamo</strong> (afecta el límite crediticio del cliente).</li>
-            <li>El monto del préstamo debe ser <strong>menor o igual al total de la factura</strong>, nunca mayor.</li>
-            <li>La aprobación de Atención al Cliente <strong>no finaliza la operación</strong>: hay que seguir los pasos que indique cada entidad crediticia.</li>
-          </ul>
-        </div></div>
-
-        <div class="callout ok"><div class="callout-icon">💬</div><div class="callout-body"><strong>¿Dudas?</strong> Comunicarse con Administración.</div></div>
-
-      </div>
-    </article>
-
-    <!-- ── SOP: AUDITORÍA ── -->
-    <article id="auditoria" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Stock y Auditoría<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Descargo de Auditoría</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Descargo de Auditoría de Locales</h1>
-        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span></div>
-      </div>
-      <div class="sop-content">
-
-        <div class="callout info"><div class="callout-icon">ℹ️</div><div class="callout-body"><strong>¿Qué es la auditoría?</strong>El auditor ingresa al local, escanea la mercadería en Skylab y cruza la información con el stock del sistema para detectar diferencias. Al finalizar, se realiza el reseteo del stock dejando reflejada la cantidad real contada.</div></div>
-
-        <h2>📋 Cómo leer la planilla de auditoría</h2>
-        <table class="data-table">
-          <thead><tr><th>Columna</th><th>Qué indica</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Artículo</strong></td><td>Código del accesorio auditado</td></tr>
-            <tr><td><strong>Descripción</strong></td><td>Nombre del producto con diferencias</td></tr>
-            <tr><td><strong>Inventario</strong></td><td>Cantidad física encontrada al momento del control</td></tr>
-            <tr><td><strong>Exist. Act.</strong></td><td>Cantidad que figuraba en el sistema al momento de la auditoría</td></tr>
-            <tr><td><strong>Ajuste</strong></td><td>Diferencia entre Inventario y Exist. Act. <strong>Negativo = faltante / Positivo = sobrante</strong></td></tr>
-            <tr><td><strong>Lista de precio</strong></td><td>Precio de venta de cada producto</td></tr>
-            <tr><td><strong>Diferencia valorizada</strong></td><td>Ajuste × Lista de precio (impacto económico de la diferencia)</td></tr>
-            <tr><td><strong>Tipo de Accesorio</strong></td><td>Original, Hogar o Accesorio Genérico</td></tr>
-          </tbody>
-        </table>
-        <p>La fila <strong>TOTALES</strong> muestra la suma de todas las diferencias en unidades y en pesos. La planilla llega por mail el mismo día o al día siguiente de la auditoría. Si se realizó un viernes, se envía a más tardar el lunes siguiente.</p>
-
-        <div class="callout warn"><div class="callout-icon">⚠️</div><div class="callout-body"><strong>Plazo para el descargo: 72 horas</strong>Desde que se recibe la planilla, el local tiene 72 hs para presentar el descargo de cualquier diferencia encontrada.</div></div>
-
-        <h2>📤 Cómo realizar el descargo</h2>
-        <ol class="steps">
-          <li><div class="step-body"><strong>Identificar los productos con diferencia</strong>Revisá la planilla e identificá todos los artículos donde la columna <em>Ajuste</em> sea distinta de cero.</div></li>
-          <li><div class="step-body"><strong>Sacar fotos de todos los productos en stock</strong>Para cada artículo con diferencia, fotografiá la totalidad de unidades que tenés en el local, todas juntas y donde se vea claramente el artículo. Ejemplo: si hay 4 auriculares Daewoo, fotografiá los 4 juntos.</div></li>
-          <li><div class="step-body"><strong>Enviar las fotos a Auditoría</strong>Mandá las fotos por mail a <strong>auditoria@grupomeditel.com</strong> dentro de las 72 hs.</div></li>
-          <li><div class="step-body"><strong>Esperar la resolución</strong>Si desde Auditoría se confirma el error de conteo, el producto es reingresado al stock y se quita el faltante de la planilla. Recibirás la planilla actualizada por mail.</div></li>
-        </ol>
-
-        <div class="callout danger"><div class="callout-icon">🚨</div><div class="callout-body"><strong>Verificar los vendedores asignados</strong>Siempre controlá que la auditoría esté asignada a los vendedores correctos. Si no figura ninguno o hay alguno incorrecto, informalo a Auditoría antes de cerrar el proceso.</div></div>
-
-        <div class="callout info" style="margin-top:32px;"><div class="callout-icon">🔒</div><div class="callout-body"><strong>Procedimiento de Robos — Solo Referentes</strong>Este proceso está disponible en la sección <strong>Referentes</strong> del menú lateral. Requiere autenticación con DNI.</div></div>
-
-      </div>
-    </article>
-
-    <!-- ── SOP: PASES ENTRE SUCURSALES ── -->
-    <article id="pases" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Stock y Auditoría<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Pases entre Sucursales</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Pases entre Sucursales</h1>
-        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span></div>
-      </div>
-      <div class="sop-content">
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">1</span> Confirmar pases de otras sucursales</h2>
-          <p>En el sistema, ingresá a <strong>Pases entre Sucursales → Confirmar Pases de Otras Suc.</strong> Ahí vas a ver todo lo que está en tránsito hacia tu local.</p>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Verificar físicamente</strong>Controlá lo recibido en el local contra el listado del sistema.</div></li>
-            <li><div class="step-body"><strong>Sin diferencias → Elegir y aceptar</strong>Si todo coincide, hacé clic en <strong>"Elegir"</strong> en cada producto y aceptá.</div></li>
-            <li><div class="step-body"><strong>Producto no llegó físicamente → Con problema</strong>Si el sistema lo lista pero el producto no está en el local, hacé clic en <strong>"Con problema"</strong> y describí el inconveniente.</div></li>
-            <li><div class="step-body"><strong>Cantidad diferente → Modificar Cantidad Recibida</strong>Si la cantidad recibida difiere de la declarada, corregila en la columna <strong>"Cantidad Recibida"</strong> antes de confirmar.</div></li>
-          </ol>
-        </div>
-
-        <div class="sop-section">
-          <h2><span class="sop-section-num">2</span> Pases con problema</h2>
-          <div class="callout warn"><div class="callout-icon">⏱️</div><div class="callout-body"><strong>Plazo máximo: 48 horas</strong>Tanto para errores del depósito como entre locales, hay que informar dentro de las 48 hs de recibido el pase.</div></div>
-          <table class="data-table">
-            <thead><tr><th>Origen del problema</th><th>Qué hacer</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Pase desde Depósito</strong></td><td>Informar por mail al depósito dentro de las 48 hs detallando los errores encontrados</td></tr>
-              <tr><td><strong>Pase entre locales</strong></td><td>Informar al referente para que pueda resolver el inconveniente</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-    </article>
-
-    <!-- ── REF: ROBOS ── -->
-    <article id="robos" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Referentes<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Robos en Sucursal</div>
-      <div class="article-header">
-        <div class="article-eyebrow" style="color:#C0392B;">🔒 Solo Referentes</div>
-        <h1 class="article-title">Robos en Sucursal</h1>
-        <div class="article-meta"><span>📅 Junio 2026</span><span>🏪 Todas las sucursales</span></div>
-      </div>
-      <div class="sop-content">
-        <div class="sop-section">
-          <h3>Acciones inmediatas en el punto de venta</h3>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Contactar a Auditoría de inmediato</strong>Informar el siniestro al área de auditoría lo antes posible.</div></li>
-            <li><div class="step-body"><strong>Corte de stock</strong>Solicitar el stock del sistema antes y después del siniestro (vía Auditoría).</div></li>
-            <li><div class="step-body"><strong>Solicitar las cámaras a Sistemas</strong>Pedir acceso a las grabaciones para verificar el momento exacto del robo y guardar el video.</div></li>
-            <li><div class="step-body"><strong>Comunicarse con el Referente y Responsable Comercial del punto.</strong></div></li>
-            <li><div class="step-body"><strong>Fotografiar todo el local</strong>Tomar fotos de todos los sectores, haciendo foco en los lugares dañados o afectados por el robo.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h3>Denuncia policial — datos a incluir</h3>
-          <ul style="padding-left:20px; line-height:2.2;">
-            <li>Inventario de lo robado</li>
-            <li>IMEI / códigos trazables de los productos</li>
-            <li>Fecha y hora exacta del siniestro</li>
-            <li>Personas presentes en el local al momento del robo</li>
-            <li>Detalle completo de la situación</li>
-            <li>Dirección del local</li>
-          </ul>
-        </div>
-        <div class="sop-section">
-          <h3>Mail con documentación — destinatarios</h3>
-          <p>Armar un mail con toda la documentación recopilada y enviarlo a:</p>
-          <div class="ref-grid" style="grid-template-columns:1fr 1fr; margin:12px 0;">
-            <div class="ref-card"><div class="ref-label">Carolina Gervan</div><div class="ref-value" style="font-size:13px;">cgervan@grupomeditel.com</div></div>
-            <div class="ref-card"><div class="ref-label">Mara Jaer</div><div class="ref-value" style="font-size:13px;">marajaer@grupomeditel.com</div></div>
-          </div>
-          <div class="callout info"><div class="callout-icon">📋</div><div class="callout-body">Enviar con copia al Referente y al Responsable Comercial del punto.</div></div>
-        </div>
-        <div class="sop-section">
-          <h3>Proceso con el seguro</h3>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Armando recibe la documentación</strong>Caro o Mara reenvían la documentación a Armando, quien la envía al seguro.</div></li>
-            <li><div class="step-body"><strong>Respuesta del seguro — plazo 72 hs hábiles</strong>El seguro responde a Armando con la declaración jurada (DJ) dentro de las 72 hs hábiles de informado el siniestro.</div></li>
-            <li><div class="step-body"><strong>Contacto del perito</strong>El perito se comunica con Armando para obtener el contacto del Referente y Responsable Comercial.</div></li>
-            <li><div class="step-body"><strong>Declaración y peritaje en el punto</strong>El perito contacta al Referente o Responsable, solicita una declaración y pactan un peritaje en sucursal.</div></li>
-            <li><div class="step-body"><strong>Relevamiento y acta final</strong>En el peritaje se realizan fotos y un relevamiento para la DSJ interna del seguro. Al cierre se levanta un acta que queda en análisis. Armando informará si el siniestro se paga de forma total, parcial o no se realiza el pago.</div></li>
-          </ol>
-        </div>
-      </div>
-    </article>
-
-    <!-- ── SOP: CUPÓN DE DESCUENTO ── -->
-    <article id="cupon-descuento" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Operaciones de Caja<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Cupón de Descuento con Autorización</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Cupón de Descuento con Autorización</h1>
-        <div class="article-meta">
-          <span>🏷️ Operaciones de Caja</span>
-          <span>👥 Toda la sucursal</span>
-          <span>🔑 Requiere autorización del referente</span>
-        </div>
-      </div>
-      <div class="sop-content">
-        <div class="callout info">
-          <span class="callout-icon">ℹ️</span>
-          <div class="callout-body"><strong>¿Qué es esto?</strong>El cupón de descuento con autorización es un tipo de descuento especial que requiere que el referente o encargado ingrese su contraseña en Skylab para habilitarlo. Una vez activado, el sistema solo permite cobrar en efectivo.</div>
-        </div>
-        <div style="border-radius:8px;overflow:hidden;margin:20px 0;background:var(--gray-light);">
-          <iframe src="https://drive.google.com/file/d/1WEb4OSUznn8polkQOHM0h7LRDm-fxKQE/preview" style="width:100%;height:420px;border:0;display:block;" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">1</span> Agregar el cupón en la factura</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Ir a Formas de Pago</strong>Con los productos ya cargados en la factura, hacer clic en <strong>Formas de Pago</strong>.</div></li>
-            <li><div class="step-body"><strong>Ingresar el código del cupón</strong>En el campo de cupón, escribir el código correspondiente al descuento (ej.: <code>5%OFFDESAU</code>) y confirmarlo.</div></li>
-            <li><div class="step-body"><strong>Esperar el diálogo de autorización</strong>Skylab mostrará automáticamente el cuadro <strong>"Ingrese Password de Autorización"</strong>. En este punto interviene el referente.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">2</span> Autorización del referente</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>El referente ingresa su contraseña</strong>Solo el referente o encargado puede tipear la contraseña en el cuadro de diálogo. El vendedor debe cederle el equipo o llamarlo al sistema.</div></li>
-            <li><div class="step-body"><strong>Confirmar la autorización</strong>Al aceptar, el sistema aplica el descuento y continúa con la factura.</div></li>
-          </ol>
-          <div class="callout danger">
-            <span class="callout-icon">🚨</span>
-            <div class="callout-body"><strong>Importante</strong>Nunca compartir la contraseña del referente con el vendedor. La autorización debe realizarse en persona.</div>
-          </div>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">3</span> Cobro: solo efectivo</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>El sistema bloquea otros medios de pago</strong>Una vez aplicado el cupón con autorización, Skylab deshabilita automáticamente las tarjetas, QR y otros medios. Solo queda habilitado el <strong>efectivo</strong>.</div></li>
-            <li><div class="step-body"><strong>Cobrar el importe en efectivo</strong>Ingresar el monto recibido y finalizar la factura normalmente.</div></li>
-          </ol>
-          <div class="callout warn">
-            <span class="callout-icon">⚠️</span>
-            <div class="callout-body"><strong>Solo efectivo</strong>Las ventas con este tipo de cupón siempre se cobran en efectivo. No se puede combinar con tarjetas ni otros medios.</div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- ── SOP: NOTA DE CRÉDITO ── -->
-    <article id="nota-credito" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Operaciones de Caja<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Nota de Crédito Electrónica</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Nota de Crédito Electrónica — Paso a Paso</h1>
-        <div class="article-meta">
-          <span>📄 Operaciones de Caja</span>
-          <span>👥 Toda la sucursal</span>
-          <span>🔑 Requiere autorización de administración</span>
-        </div>
-      </div>
-      <div class="sop-content">
-        <div class="callout info">
-          <span class="callout-icon">ℹ️</span>
-          <div class="callout-body"><strong>¿Cuándo se emite una Nota de Crédito?</strong><ul style="margin-top:6px;padding-left:18px;"><li>IMEI cruzado en la factura original</li><li>Arrepentimiento de compra del cliente</li><li>Cambio por falla del equipo</li></ul></div>
-        </div>
-        <div class="callout warn">
-          <span class="callout-icon">⚠️</span>
-          <div class="callout-body"><strong>Siempre requiere autorización de administración</strong>Antes de emitir la NC, contactar a administración para solicitar la autorización. No se puede finalizar sin ese paso.</div>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">1</span> Acceder a N/Crédito</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Seleccionar el Punto de Venta</strong>En la barra de menús ir a <strong>SUCURSALES</strong> → provincia → punto de venta asignado. Asegurarse de <strong>NO</strong> elegir la opción que dice "Manual".</div></li>
-            <li><div class="step-body"><strong>Ir a N/Crédito</strong>En el menú FACTURACIÓN, seleccionar <strong>N/Crédito</strong>.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">2</span> Completar datos del cliente</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Ingresar DNI, nombre y apellido</strong>Deben coincidir exactamente con los de la factura original.</div></li>
-            <li><div class="step-body"><strong>Completar teléfono y email</strong>Usar los mismos datos de la factura original cuando sea posible.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">3</span> Vincular la factura original</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Usar "Traer Art. de Fact.N/NDeb.Nro"</strong>En el campo correspondiente, ingresar el número de la factura original. Los primeros 4 dígitos van en el primer cuadro y el resto en el segundo cuadro.</div></li>
-            <li><div class="step-body"><strong>Confirmar</strong>El sistema importará automáticamente los artículos de la factura original.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">4</span> Solicitar autorización y guardar</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Contactar a administración</strong>Comunicarse con administración, dar el número de factura original y el motivo de la NC.</div></li>
-            <li><div class="step-body"><strong>Hacer clic en "Usar Autorización"</strong>Una vez que administración aprueba, hacer clic en el botón <strong>Usar Autorización</strong>.</div></li>
-            <li><div class="step-body"><strong>Guardar</strong>Hacer clic en <strong>Guardar</strong> para emitir la NC electrónica.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">5</span> NC parcial (un solo producto)</h2>
-          <p>Si solo se necesita hacer la NC de un artículo específico y no de toda la factura:</p>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Eliminar los artículos que no cambian</strong>Después de importar la factura original, borrar los artículos que NO son parte de la devolución. Dejar solo el que sí se devuelve.</div></li>
-            <li><div class="step-body"><strong>Ajustar la forma de pago</strong>Modificar el monto para que coincida con el precio del producto de la NC.</div></li>
-            <li><div class="step-body"><strong>Autorización y guardar</strong>Igual que el paso 4: autorización de administración → Usar Autorización → Guardar.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2>Después de la NC</h2>
-          <div class="ref-grid">
-            <div class="ref-card">
-              <div class="ref-label">IMEI cruzado</div>
-              <div class="ref-value">Re-facturar</div>
-              <div class="ref-sub">Emitir nueva factura con el IMEI correcto, mismo medio de pago.</div>
-            </div>
-            <div class="ref-card">
-              <div class="ref-label">Arrepentimiento / Falla</div>
-              <div class="ref-value">Devolver</div>
-              <div class="ref-sub">Devolver el importe al cliente por el mismo medio de pago de la compra original.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- ── SOP: FACTURACIÓN ── -->
-    <article id="facturacion" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Operaciones de Caja<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Facturación y Medios de Pago</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Facturación y Medios de Pago</h1>
-        <div class="article-meta">
-          <span>🧾 Operaciones de Caja</span>
-          <span>👥 Toda la sucursal</span>
-        </div>
-      </div>
-      <div class="sop-content">
-        <div class="sop-section">
-          <h2><span class="sop-section-num">1</span> Factura Electrónica</h2>
-          <div class="callout info">
-            <span class="callout-icon">ℹ️</span>
-            <div class="callout-body">La factura electrónica es el comprobante estándar. Se puede reimprimir y reenviar por email. <strong>Siempre usarla cuando las condiciones lo permitan.</strong></div>
-          </div>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Seleccionar el Punto de Venta</strong>SUCURSALES → provincia → punto de venta asignado. No elegir la opción que dice "Manual".</div></li>
-            <li><div class="step-body"><strong>Ir a FACTURAS</strong>En el menú FACTURACIÓN, acceder a la sección FACTURAS.</div></li>
-            <li><div class="step-body"><strong>Completar datos del cliente</strong>DNI, nombre, apellido, teléfono y email son obligatorios. Para Factura A: agregar dirección, código postal, provincia y verificar que sea responsable inscripto.</div></li>
-            <li><div class="step-body"><strong>Agregar productos</strong>Celulares con IMEI: usar la pistola lectora en el campo IMEI para evitar cruces. Accesorios sin IMEI: ingresar en el campo ARTÍCULO y seleccionar de la lista.</div></li>
-            <li><div class="step-body"><strong>Agregar formas de pago</strong>Seleccionar FORMAS DE PAGO y elegir el método: efectivo, tarjeta o combinación. Completar los detalles según el medio elegido.</div></li>
-            <li><div class="step-body"><strong>Cobrar</strong>Con tarjeta: pasar el cobro por el posnet integrado antes de continuar. Con otros medios: seguir el procedimiento correspondiente.</div></li>
-            <li><div class="step-body"><strong>Revisar y confirmar</strong>Verificar que todos los datos estén correctos. Hacer clic en <strong>TERMINAR</strong> y luego en <strong>ENVIAR FACTURA</strong>.</div></li>
-            <li><div class="step-body"><strong>Imprimir o enviar por email</strong>Seleccionar EMAIL para enviar al cliente o PANTALLA para imprimir en el PDV.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">2</span> Factura Manual (emergencia)</h2>
-          <div class="callout warn">
-            <span class="callout-icon">⚠️</span>
-            <div class="callout-body"><strong>Solo en casos excepcionales</strong>Usar únicamente cuando el sistema está caído, sin internet o hay corte de luz. Tiene la misma validez legal pero no se puede reimprimir.</div>
-          </div>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Tomar el talonario</strong>Usar el próximo número correlativo. Verificar que esté en blanco y autorizado.</div></li>
-            <li><div class="step-body"><strong>Completar datos del cliente y fecha</strong>Nombre completo o razón social, CUIT/CUIL o DNI, domicilio y condición ante el IVA.</div></li>
-            <li><div class="step-body"><strong>Detallar los productos</strong>Cantidad, descripción exacta, precio unitario y total. Para celulares: incluir el IMEI.</div></li>
-            <li><div class="step-body"><strong>Indicar la forma de pago</strong>Efectivo: anotar "EFECTIVO". Tarjeta: tipo, lote, cupón, cuotas y monto. Otros: detallar según corresponda.</div></li>
-            <li><div class="step-body"><strong>Entregar original al cliente</strong>La copia blanca es para el cliente. La amarilla o rosa queda archivada en el local.</div></li>
-            <li><div class="step-body"><strong>Cargar en sistema cuando se restituya</strong>Registrar la factura manual en la sección "Facturación Manual", con el mismo número de comprobante.</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">3</span> Medios de Pago</h2>
-          <h3>Efectivo y Transferencias</h3>
-          <p>Las transferencias requieren validación de administración antes de entregar el producto. El impacto puede demorar 48 a 72 hs. No entregar mercadería sin confirmación.</p>
-          <h3>Créditos bancarios</h3>
-          <p>Banco Columbia, Crédito Argentino, Santander Consumer y otros. El proceso se completa en la web de la entidad y luego se carga como forma de pago en la factura.</p>
-          <h3>Tarjetas — Posnet / Clover</h3>
-          <p>Aceptan todas las tarjetas habilitadas en el sistema. También aceptan billeteras digitales: MODO, BNA+, Cuenta DNI y Personal Pay.</p>
-          <h3>Tarjetas — GETPOS (GetNet)</h3>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Abrir "Payment App"</strong>Ingresar a la app de cobro del equipo GetPos.</div></li>
-            <li><div class="step-body"><strong>Deslizar o acercar la tarjeta</strong>Débito: pasar siempre por Posnet/Clover. Crédito: seleccionar "Plan GetNet".</div></li>
-            <li><div class="step-body"><strong>Elegir cuotas</strong>Sistema indica "Promo" → seleccionar <strong>SIN INTERÉS</strong>. Sin promo → seleccionar <strong>CON INTERÉS</strong>. Confirmar las cuotas elegidas por el cliente.</div></li>
-          </ol>
-          <div class="callout info">
-            <span class="callout-icon">ℹ️</span>
-            <div class="callout-body">Los bines para GetNet en el sistema son genéricos y compartidos en las condiciones comerciales del grupo.</div>
-          </div>
-          <h3>Pagos QR</h3>
-          <p>Se acepta QR por <strong>Posnet/Clover</strong> o por <strong>Mercado Pago integrado</strong>. No se acepta QR con GETPOS. Para Mercado Pago: colocar el bin de Mercado Pago QR y desmarcar la opción "Enviar a Posnet".</p>
-          <h3>Toma de equipos usados</h3>
-          <p>Exclusivo Riiing. El valor del usado se descuenta del precio del equipo nuevo al facturar.</p>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">4</span> Prevención de Fraude</h2>
-          <h3>Verificación de tarjeta</h3>
-          <ol class="steps">
-            <li><div class="step-body">Conservar la tarjeta del cliente hasta terminar el cobro.</div></li>
-            <li><div class="step-body">Solicitar documento de identidad y verificar que sea el titular.</div></li>
-            <li><div class="step-body">No aceptar tarjetas deterioradas, vencidas o con signos de adulteración.</div></li>
-            <li><div class="step-body">Controlar número de tarjeta, nombre del titular, fechas de vigencia, panel de firma y código de seguridad al dorso.</div></li>
-            <li><div class="step-body">Pedir al cliente que firme el ticket y verificar que la firma coincida con la de la tarjeta y el documento.</div></li>
-            <li><div class="step-body">Guardar copia del ticket por posibles disputas.</div></li>
-          </ol>
-          <h3>Verificación de documento</h3>
-          <div class="callout danger">
-            <span class="callout-icon">🚨</span>
-            <div class="callout-body"><strong>Solo DNI físico</strong>Está prohibida la venta con DNI digital. Siempre solicitar documento físico. Pedir que el cliente escriba su DNI en el cupón físico de la venta y verificar que coincida con el documento presentado.</div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- ── SOP: CIERRE DE CAJA ── -->
-    <article id="cierre-caja" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Operaciones de Caja<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Cierre de Caja</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Cierre de Caja</h1>
-        <div class="article-meta">
-          <span>🔐 Operaciones de Caja</span>
-          <span>👥 Toda la sucursal</span>
-          <span>📅 Al final de cada turno</span>
-        </div>
-      </div>
-      <div class="sop-content">
-        <div class="callout info">
-          <span class="callout-icon">ℹ️</span>
-          <div class="callout-body"><strong>¿Para qué sirve?</strong>Controlar que los cobros del turno coincidan con lo registrado en el sistema. Permite detectar diferencias y asegura que todas las ventas estén reflejadas correctamente.</div>
-        </div>
-        <div style="border-radius:8px;overflow:hidden;margin:20px 0;background:var(--gray-light);">
-          <iframe src="https://drive.google.com/file/d/18oHVafRGYmW6KO7h6wfr9khyJmVUWjNH/preview" style="width:100%;height:420px;border:0;display:block;" allow="autoplay" allowfullscreen></iframe>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">1</span> Acceder al Cierre de Caja</h2>
-          <p>En el menú principal del sistema, hacer clic en el botón <strong>"Cierre de Caja"</strong>. Se abrirán cuatro secciones: Control de Efectivo, Cierres de Lote, Control de Facturas Manuales y Diferencias.</p>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">2</span> Control de Efectivo</h2>
-          <table class="data-table">
-            <thead><tr><th>Campo</th><th>¿Qué es?</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Saldo inicial</strong></td><td>Monto con el que se abrió caja (pendiente de depósito del día anterior).</td></tr>
-              <tr><td><strong>Efectivo facturado</strong></td><td>Suma del efectivo cobrado en ventas del turno.</td></tr>
-              <tr><td><strong>Retiros</strong></td><td>Total depositado en caja fuerte durante el turno.</td></tr>
-              <tr><td><strong>Efectivo facturas manuales</strong></td><td>Efectivo en el PDV correspondiente a facturas manuales no cargadas aún en sistema.</td></tr>
-              <tr><td><strong>Diferencia de caja</strong></td><td>Debe corresponder al efectivo en el PDV que todavía no fue retirado.</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">3</span> Cierres de Lote (tarjetas)</h2>
-          <p>Para cada equipo de cobro ingresar: <strong>N° de lote</strong>, <strong>Cantidad de cupones</strong> e <strong>Importe total</strong>.</p>
-          <div class="table-wrap"><table class="data-table">
-            <thead><tr><th>Código sistema</th><th>Equipo</th><th>Cómo obtener el cierre</th></tr></thead>
-            <tbody>
-              <tr><td class="mono">POSVX690</td><td>Posnet negro (integrado)</td><td>Imprimir cierre en el equipo. Copiar N° de lote, cant. cupones y monto total.</td></tr>
-              <tr><td class="mono">POSCLOVER</td><td>Clover</td><td>El N° de lote se verifica en un cupón impreso. Ingresar cantidad de cupones y total del resumen de ventas.</td></tr>
-              <tr><td class="mono">POSVIUMI</td><td>Viumi (Magicpos / Smartpos)</td><td>Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos.</td></tr>
-              <tr><td class="mono">POSGETNET / POSGETPOS</td><td>Getnet (Magicpos / Smartpos)</td><td>Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos.</td></tr>
-              <tr><td class="mono">POSOPENPAY</td><td>Openpay (Magicpos)</td><td>Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos.</td></tr>
-            </tbody>
-          </table></div>
-          <div class="callout warn">
-            <span class="callout-icon">⚠️</span>
-            <div class="callout-body"><strong>Si hay más de un Posnet</strong>Cargar el cierre de cada equipo por separado. Si se realizaron varios cierres durante el turno, detallarlos todos.</div>
-          </div>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">4</span> Facturas Manuales no cargadas</h2>
-          <p>Listar todas las facturas manuales del turno que todavía <strong>no</strong> se cargaron en el sistema. Si ya se cargaron, no incluirlas.</p>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Tipo de comprobante</strong>Indicar si es Factura o Nota de Crédito.</div></li>
-            <li><div class="step-body"><strong>Tipo A o B</strong></div></li>
-            <li><div class="step-body"><strong>Punto de venta</strong>El que figura en el talonario manual.</div></li>
-            <li><div class="step-body"><strong>Número de comprobante</strong></div></li>
-            <li><div class="step-body"><strong>Importe total</strong></div></li>
-            <li><div class="step-body"><strong>Formas de pago</strong>Detallar con qué se cobró el comprobante.</div></li>
-          </ol>
-          <div class="callout warn">
-            <span class="callout-icon">⚠️</span>
-            <div class="callout-body"><strong>Notas de Crédito manuales</strong>El importe debe cargarse en <strong>negativo</strong> (con signo menos), ya que representa una devolución.</div>
-          </div>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">5</span> Diferencias y cómo resolverlas</h2>
-          <div class="ref-grid">
-            <div class="ref-card">
-              <div class="ref-label">Diferencia de efectivo</div>
-              <div class="ref-value">Verificar retiros</div>
-              <div class="ref-sub">Ocurre cuando se hizo un retiro físico a caja fuerte pero no se registró en el sistema.</div>
-            </div>
-            <div class="ref-card">
-              <div class="ref-label">Diferencia en cierres de lote</div>
-              <div class="ref-value">Revisar facturas</div>
-              <div class="ref-sub">Puede faltar detallar una factura manual o no se cargó el cierre de algún equipo de cobro.</div>
-            </div>
-          </div>
-          <div class="callout ok">
-            <span class="callout-icon">✅</span>
-            <div class="callout-body"><strong>¿Dudas?</strong>Cualquier consulta comunicarse con administración.</div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- ── SOP: GARANTÍA BOLSO PROTEGIDO ── -->
-    <article id="garantia-bolso" class="page">
-      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Seguros<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Garantía Bolso Protegido</div>
-      <div class="article-header">
-        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
-        <h1 class="article-title">Garantía: Bolso Protegido</h1>
-        <div class="article-meta">
-          <span>👜 Seguros</span>
-          <span>👥 Toda la sucursal</span>
-        </div>
-      </div>
-      <div class="sop-content">
-        <div class="callout info">
-          <span class="callout-icon">ℹ️</span>
-          <div class="callout-body"><strong>¿Qué es el Bolso Protegido?</strong>Es una garantía exclusiva para bolsos y mochilas, disponible en 3 niveles: Bronce, Plata y Oro. Al facturarlo correctamente, Skylab imprime automáticamente el comprobante de garantía para el cliente.</div>
-        </div>
-        <h2>Códigos de sistema</h2>
-        <table class="data-table">
-          <thead><tr><th>Nivel</th><th>Código en Skylab</th></tr></thead>
-          <tbody>
-            <tr><td>🥉 Bronce</td><td class="mono">GTIA-BOLBRONCE</td></tr>
-            <tr><td>🥈 Plata</td><td class="mono">GTIA-BOLPLATA</td></tr>
-            <tr><td>🥇 Oro</td><td class="mono">GTIA-BOLORO</td></tr>
-          </tbody>
-        </table>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">1</span> Agregar la garantía junto con el bolso</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Agregar el bolso/mochila</strong>Cargar el producto en la factura normalmente.</div></li>
-            <li><div class="step-body"><strong>Agregar el código de garantía</strong>En el campo de artículo, ingresar el código correspondiente (ej.: <code>GTIA-BOLPLATA</code>) y seleccionarlo.</div></li>
-            <li><div class="step-body"><strong>Verificar la doble entrada</strong>El sistema debe mostrar el artículo de garantía <strong>dos veces</strong>: una con su precio y otra en <strong>$0</strong>. Ambas líneas son necesarias para que el comprobante de garantía se imprima.</div></li>
-          </ol>
-          <div class="callout danger">
-            <span class="callout-icon">🚨</span>
-            <div class="callout-body"><strong>Crítico: siempre debe aparecer dos veces</strong>Si la garantía figura solo una vez, el comprobante no se imprime y el cliente no tendrá cobertura activa. Verificar siempre antes de finalizar la factura.</div>
-          </div>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">2</span> Vender la garantía por separado</h2>
-          <ol class="steps">
-            <li><div class="step-body"><strong>Agregar el código de garantía</strong>Ingresar el código de garantía en la factura.</div></li>
-            <li><div class="step-body"><strong>Agregar también el producto asociado</strong>Es obligatorio incluir el bolso o mochila correspondiente en la misma factura. Sin él, la garantía no se activa correctamente.</div></li>
-            <li><div class="step-body"><strong>Verificar la doble entrada</strong>La garantía debe aparecer dos veces (precio + $0).</div></li>
-          </ol>
-        </div>
-        <div class="sop-section">
-          <h2><span class="sop-section-num">3</span> Entrega del comprobante</h2>
-          <p>Al finalizar la factura, Skylab imprimirá automáticamente el comprobante de garantía Bolso Protegido. Entregárselo al cliente junto con el ticket de compra.</p>
-          <div class="callout ok">
-            <span class="callout-icon">✅</span>
-            <div class="callout-body"><strong>Informar al cliente</strong>Explicarle que ese comprobante es la constancia de su garantía y que debe conservarlo para cualquier reclamo futuro.</div>
-          </div>
-        </div>
-      </div>
-    </article>
+    <!-- Los artículos se generan desde content/sops/*.json — editá desde /admin/ -->
+    <div id="articles-container"></div>
 
     <!-- COMING SOON -->
     <article id="coming" class="page">
@@ -1149,18 +377,131 @@
 </div>
 
 <script>
-const SOPS = [
-  { id:'devoluciones', title:'Devoluciones por Medio de Pago', icon:'↩️', category:'Operaciones de Caja', desc:'Efectivo, transferencia, GETPOS, Posnet/Clover, QR y anulación de créditos.', keywords:'devolucion reembolso getpos posnet clover visa mastercard naranja qr efectivo transferencia prestamo credito rapicompras 0800' },
-  { id:'siniestros', title:'Siniestros — Seguro Sancor', icon:'🛡️', category:'Seguros', desc:'Proceso completo para gestionar el uso del seguro Sancor en sucursal, incluyendo la firma del recibo.', keywords:'siniestro seguro sancor garantia voucher recibo firma administracion descuento reparacion equipo' },
-  { id:'prestamos', title:'Préstamos en Sucursal', icon:'💳', category:'Préstamos y Créditos', desc:'Cómo cargar un préstamo de financiera en el sistema y usarlo como medio de pago en la factura.', keywords:'prestamo credito financiera multiconsulta factura medio de pago aprobacion administracion cuotas' },
-  { id:'auditoria', title:'Descargo de Auditoría', icon:'🔍', category:'Stock y Auditoría', desc:'Cómo leer la planilla de auditoría e impugnar diferencias de stock dentro de las 72 hs.', keywords:'auditoria descargo stock diferencia faltante sobrante planilla skylab inventario ajuste reset' },
-  { id:'pases', title:'Pases entre Sucursales', icon:'🔄', category:'Stock y Auditoría', desc:'Cómo confirmar pases recibidos de otras sucursales o depósito y qué hacer ante problemas.', keywords:'pase sucursal deposito transferencia stock mercaderia confirmar problema cantidad recibida' },
-  { id:'cupon-descuento', title:'Cupón de Descuento con Autorización', icon:'🏷️', category:'Operaciones de Caja', desc:'Cómo aplicar el cupón de descuento con autorización del referente en Skylab y cobrar en efectivo.', keywords:'cupon descuento autorizacion referente skylab password efectivo forma de pago 5%OFFDESAU' },
-  { id:'nota-credito', title:'Nota de Crédito Electrónica', icon:'📄', category:'Operaciones de Caja', desc:'Paso a paso para emitir una NC por imei cruzado, arrepentimiento de compra o cambio por falla.', keywords:'nota credito nc electronica devolucion imei factura autorizacion administracion parcial' },
-  { id:'facturacion', title:'Facturación y Medios de Pago', icon:'🧾', category:'Operaciones de Caja', desc:'Cómo emitir facturas electrónicas y manuales y operar con todos los medios de pago disponibles.', keywords:'factura electronica manual tarjeta posnet clover getpos getnet viumi openpay qr transferencia credito efectivo dni verificacion fraude buenas practicas' },
-  { id:'cierre-caja', title:'Cierre de Caja', icon:'🔐', category:'Operaciones de Caja', desc:'Procedimiento completo al final del turno: control de efectivo, cierres de lote y facturas manuales.', keywords:'cierre caja efectivo lote cupon posnet clover viumi getnet openpay factura manual diferencia retiro' },
-  { id:'garantia-bolso', title:'Garantía Bolso Protegido', icon:'👜', category:'Seguros', desc:'Cómo agregar la garantía de bolso/mochila (Bronce, Plata, Oro) en Skylab y los códigos de sistema.', keywords:'garantia bolso mochila bronce plata oro GTIA-BOLBRONCE GTIA-BOLPLATA GTIA-BOLORO skylab factura doble imprimir' }
-];
+// ══════════════════════════════════════════════════════════════
+//  CONTENIDO DINÁMICO — se carga desde content/manifest.json
+//  y content/sops/*.json. Para editar el contenido usá el panel
+//  de administración en /admin/ (no hace falta tocar este HTML).
+// ══════════════════════════════════════════════════════════════
+let SOPS = [];
+const REF_PAGES = []; // se completa automáticamente con los artículos marcados como restringidos
+
+const NAV_SEP = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>';
+
+function esMono(txt) {
+  const plano = txt.replace(/<[^>]*>/g, '').trim();
+  return plano.length >= 6 && /^[A-Z0-9 °\/\-.+]+$/.test(plano) && /[A-Z0-9]/.test(plano);
+}
+
+function renderBloques(bloques) {
+  let html = '';
+  let abierta = false; // hay una .sop-section abierta
+  const cerrar = () => { if (abierta) { html += '</div>'; abierta = false; } };
+  for (const b of (bloques || [])) {
+    switch (b.type) {
+      case 'seccion':
+        cerrar();
+        html += '<div class="sop-section">';
+        abierta = true;
+        if (b.titulo) html += `<h2>${b.numero ? `<span class="sop-section-num">${b.numero}</span> ` : ''}${b.titulo}</h2>`;
+        break;
+      case 'titulo':
+        cerrar();
+        html += `<h2>${b.texto || ''}</h2>`;
+        break;
+      case 'subtitulo':
+        html += `<h3>${b.texto || ''}</h3>`;
+        break;
+      case 'parrafo':
+        html += `<p>${b.texto || ''}</p>`;
+        break;
+      case 'aviso':
+        html += `<div class="callout ${b.estilo || 'info'}"><div class="callout-icon">${b.icono || 'ℹ️'}</div><div class="callout-body">${b.texto || ''}</div></div>`;
+        break;
+      case 'pasos':
+        html += `<ol class="steps">${(b.items || []).map(i => `<li><div class="step-body">${i.titulo ? `<strong>${i.titulo}</strong>` : ''}${i.texto || ''}</div></li>`).join('')}</ol>`;
+        break;
+      case 'lista':
+        html += `<ul style="padding-left:20px; line-height:2;">${(b.items || []).map(i => `<li>${i}</li>`).join('')}</ul>`;
+        break;
+      case 'lista_numerada':
+        html += `<ol>${(b.items || []).map(i => `<li>${i}</li>`).join('')}</ol>`;
+        break;
+      case 'tabla':
+        html += `<div class="table-wrap"><table class="data-table"><thead><tr>${(b.columnas || []).map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${(b.filas || []).map(f => `<tr>${(f.celdas || []).map(c => `<td${esMono(c) ? ' class="mono"' : ''}>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+        break;
+      case 'video': {
+        const m = (b.url || '').match(/\/d\/([^\/?]+)/);
+        if (m) html += `<div style="border-radius:8px;overflow:hidden;margin:20px 0;background:var(--gray-light);"><iframe src="https://drive.google.com/file/d/${m[1]}/preview" style="width:100%;height:420px;border:0;display:block;" allow="autoplay" allowfullscreen></iframe></div>`;
+        break;
+      }
+      case 'tarjetas':
+        html += `<div class="ref-grid">${(b.items || []).map(t => `<div class="ref-card"><div class="ref-label">${t.etiqueta || ''}</div><div class="ref-value"${(t.valor || '').length > 16 ? ' style="font-size:13px;word-break:break-all;"' : ''}>${t.valor || ''}</div>${t.nota ? `<div class="ref-sub">${t.nota}</div>` : ''}</div>`).join('')}</div>`;
+        break;
+      case 'html':
+        html += b.codigo || '';
+        break;
+    }
+  }
+  cerrar();
+  return html;
+}
+
+function renderArticulo(a) {
+  return `<article id="${a.id}" class="page">
+    <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a>${NAV_SEP}${a.categoria || ''}${NAV_SEP}${a.titulo_corto || a.titulo}</div>
+    <div class="article-header">
+      <div class="article-eyebrow"${a.restringido ? ' style="color:#C0392B;"' : ''}>${a.eyebrow || 'Procedimiento Operativo Estándar'}</div>
+      <h1 class="article-title">${a.titulo}</h1>
+      <div class="article-meta">${(a.meta || []).map(m => `<span>${m}</span>`).join('')}</div>
+    </div>
+    <div class="sop-content">${renderBloques(a.bloques)}</div>
+  </article>`;
+}
+
+async function cargarContenido() {
+  try {
+    const manifest = await (await fetch('content/manifest.json')).json();
+    const ids = manifest.secciones.flatMap(s => s.articulos);
+    const articulos = await Promise.all(ids.map(id =>
+      fetch(`content/sops/${id}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
+    ));
+    const porId = {};
+    articulos.forEach(a => { if (a) porId[a.id] = a; });
+
+    // ── Menú lateral ──
+    let nav = '<div class="nav-section-label">Inicio</div>' +
+      '<a href="#" class="active" data-target="home" onclick="showPage(\'home\',this);return false;"><span class="nav-icon">🏠</span> Inicio</a>';
+    for (const s of manifest.secciones) {
+      nav += s.restringido
+        ? `<div class="ref-nav-section-label">🔒 ${s.etiqueta}</div>`
+        : `<div class="nav-section-label">${s.etiqueta}</div>`;
+      for (const id of s.articulos) {
+        const a = porId[id];
+        if (!a) continue;
+        if (a.restringido && !REF_PAGES.includes(a.id)) REF_PAGES.push(a.id);
+        nav += `<a href="#" data-target="${a.id}"${a.restringido ? ' class="ref-nav-link"' : ''} onclick="showPage('${a.id}',this);return false;"><span class="nav-icon">${a.icono || '📄'}</span> ${a.titulo_corto || a.titulo}</a>`;
+      }
+    }
+    nav += '<div class="nav-section-label">Próximamente</div>' +
+      '<a href="#" data-target="coming" onclick="showPage(\'coming\',this);return false;"><span class="nav-icon">🔑</span> Accesos y sistemas</a>';
+    document.querySelector('#sidebar nav').innerHTML = nav;
+
+    // ── Artículos ──
+    document.getElementById('articles-container').innerHTML =
+      Object.values(porId).map(renderArticulo).join('');
+
+    // ── Tarjetas de inicio y buscador ──
+    SOPS = Object.values(porId).filter(a => !a.restringido).map(a => ({
+      id: a.id, title: a.titulo, icon: a.icono || '📄',
+      category: a.categoria || '', desc: a.descripcion || '', keywords: a.keywords || ''
+    }));
+    renderCards();
+  } catch (e) {
+    console.error('Error cargando contenido:', e);
+    document.getElementById('cards-grid').innerHTML =
+      '<p style="color:var(--gray-mid)">No se pudo cargar el contenido. Recargá la página (Ctrl+Shift+R).</p>';
+  }
+}
 
 function renderCards() {
   document.getElementById('cards-grid').innerHTML = SOPS.map(s => `
@@ -1213,7 +554,6 @@ document.getElementById('overlay').addEventListener('click', function() {
 
 // ── REFERENTES AUTH ──
 const REF_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwO6sPSL4NF3PGMx3WY5Z--6FryvscJyjZTUqppY1NvhyXJazokosDyIdaKILCRUTn1/exec';
-const REF_PAGES = ['robos']; // agregá IDs acá al crear nuevos artículos de referentes
 
 // Intercepta showPage para páginas protegidas
 const _showPageOriginal = showPage;
@@ -1304,7 +644,7 @@ if (sessionStorage.getItem('refAuth') === 'true') {
   mostrarSesionBar(sessionStorage.getItem('refNombre'));
 }
 
-renderCards();
+cargarContenido();
 </script>
 </body>
 </html>
