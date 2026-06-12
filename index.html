@@ -460,10 +460,11 @@ function renderArticulo(a) {
 
 async function cargarContenido() {
   try {
-    const manifest = await (await fetch('content/manifest.json')).json();
+    const v = Date.now(); // evita que el navegador use contenido viejo en caché
+    const manifest = await (await fetch(`content/manifest.json?v=${v}`)).json();
     const ids = manifest.secciones.flatMap(s => s.articulos);
     const articulos = await Promise.all(ids.map(id =>
-      fetch(`content/sops/${id}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
+      fetch(`content/sops/${id}.json?v=${v}`).then(r => r.ok ? r.json() : null).catch(() => null)
     ));
     const porId = {};
     articulos.forEach(a => { if (a) porId[a.id] = a; });
