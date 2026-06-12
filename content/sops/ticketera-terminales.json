@@ -1,0 +1,36 @@
+{
+  "id": "ticketera-terminales",
+  "titulo": "Nueva Ticketera para Terminales de Cobro",
+  "titulo_corto": "Ticketera Terminales",
+  "icono": "🎟️",
+  "categoria": "Operaciones de Caja",
+  "descripcion": "Cómo gestionar fallas o solicitar terminales de cobro adicionales a través del nuevo formulario en Jira.",
+  "keywords": "ticketera terminal cobro posnet clover getpos jira formulario falla equipo adicional soporte wifi lote",
+  "meta": ["🎟️ Operaciones de Caja", "👥 Toda la sucursal"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>Nuevo canal único de gestión</strong>A partir de ahora, todas las gestiones relacionadas con terminales de cobro deberán realizarse exclusivamente a través del nuevo formulario en Jira." },
+    { "type": "seccion", "numero": "1", "titulo": "¿Qué se puede gestionar?" },
+    { "type": "parrafo", "texto": "Dentro del formulario podrán seleccionar:" },
+    { "type": "tarjetas", "items": [
+      { "etiqueta": "Opción 1", "valor": "Equipo con fallas", "nota": "Para reportar inconvenientes técnicos del equipo." },
+      { "etiqueta": "Opción 2", "valor": "Solicitud de equipo adicional", "nota": "En caso de necesitar una terminal extra para el punto de venta." }
+    ]},
+    { "type": "seccion", "numero": "2", "titulo": "¿Cómo cargar la solicitud?" },
+    { "type": "pasos", "items": [
+      { "titulo": "Ingresar a la plataforma", "texto": "Abrí el siguiente enlace: <a href=\"https://admriiing.atlassian.net/servicedesk/customer/portal/67\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--teal-dark);font-weight:600;\">admriiing.atlassian.net › Portal de Terminales</a>" },
+      { "titulo": "Completar los datos solicitados", "texto": "Sucursal, tipo de terminal, número de terminal, etc." },
+      { "titulo": "Seleccionar el tipo de gestión", "texto": "Equipo con fallas o solicitud de equipo adicional, según corresponda." },
+      { "titulo": "Detallar el inconveniente", "texto": "En caso de fallas, describir el problema en el campo de comentarios." },
+      { "titulo": "Enviar la solicitud", "texto": "" }
+    ]},
+    { "type": "aviso", "estilo": "ok", "icono": "✅", "texto": "Una vez enviada, recibirán un correo de confirmación y podrán hacer seguimiento desde el portal." },
+    { "type": "seccion", "numero": "", "titulo": "⚠️ Importante" },
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "Si el equipo presenta una falla técnica (conexión wifi, cierre de lotes, etc.), recomendamos comunicarse <strong>en paralelo</strong> con el soporte de las terminales para agilizar la resolución:" },
+    { "type": "tarjetas", "items": [
+      { "etiqueta": "0800 Posnet", "valor": "0800-333-4421", "nota": "" },
+      { "etiqueta": "0800 Clover", "valor": "0800-222-2568", "nota": "" },
+      { "etiqueta": "GETPOS", "valor": "+54 9 11 4400-5018", "nota": "" }
+    ]}
+  ]
+}
