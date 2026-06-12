@@ -329,10 +329,15 @@
       <a href="#" data-target="devoluciones" onclick="showPage('devoluciones',this);return false;">
         <span class="nav-icon">↩️</span> Devoluciones
       </a>
+      <a href="#" data-target="cupon-descuento" onclick="showPage('cupon-descuento',this);return false;"><span class="nav-icon">🏷️</span> Cupón de Descuento</a>
+      <a href="#" data-target="nota-credito" onclick="showPage('nota-credito',this);return false;"><span class="nav-icon">📄</span> Nota de Crédito</a>
+      <a href="#" data-target="facturacion" onclick="showPage('facturacion',this);return false;"><span class="nav-icon">🧾</span> Facturación</a>
+      <a href="#" data-target="cierre-caja" onclick="showPage('cierre-caja',this);return false;"><span class="nav-icon">🔐</span> Cierre de Caja</a>
       <div class="nav-section-label">Seguros</div>
       <a href="#" data-target="siniestros" onclick="showPage('siniestros',this);return false;">
         <span class="nav-icon">🛡️</span> Siniestros Sancor
       </a>
+      <a href="#" data-target="garantia-bolso" onclick="showPage('garantia-bolso',this);return false;"><span class="nav-icon">👜</span> Garantía Bolso Protegido</a>
       <div class="nav-section-label">Préstamos y Créditos</div>
       <a href="#" data-target="prestamos" onclick="showPage('prestamos',this);return false;"><span class="nav-icon">💳</span> Préstamos en sucursal</a>
       <div class="nav-section-label">Stock y Auditoría</div>
@@ -341,8 +346,7 @@
       <div class="ref-nav-section-label">🔒 Referentes</div>
       <a href="#" data-target="robos" class="ref-nav-link" onclick="showPage('robos',this);return false;"><span class="nav-icon">🚨</span> Robos en Sucursal</a>
       <div class="nav-section-label">Próximamente</div>
-      <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">🧾</span> Facturación</a>
-      <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">🔐</span> Accesos y sistemas</a>
+      <a href="#" data-target="coming" onclick="showPage('coming',this);return false;"><span class="nav-icon">🔑</span> Accesos y sistemas</a>
     </nav>
   </aside>
 
@@ -744,6 +748,372 @@
       </div>
     </article>
 
+    <!-- ── SOP: CUPÓN DE DESCUENTO ── -->
+    <article id="cupon-descuento" class="page">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Operaciones de Caja<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Cupón de Descuento con Autorización</div>
+      <div class="article-header">
+        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
+        <h1 class="article-title">Cupón de Descuento con Autorización</h1>
+        <div class="article-meta">
+          <span>🏷️ Operaciones de Caja</span>
+          <span>👥 Toda la sucursal</span>
+          <span>🔑 Requiere autorización del referente</span>
+        </div>
+      </div>
+      <div class="sop-content">
+        <div class="callout info">
+          <span class="callout-icon">ℹ️</span>
+          <div class="callout-body"><strong>¿Qué es esto?</strong>El cupón de descuento con autorización es un tipo de descuento especial que requiere que el referente o encargado ingrese su contraseña en Skylab para habilitarlo. Una vez activado, el sistema solo permite cobrar en efectivo.</div>
+        </div>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;margin:20px 0;">
+          <iframe src="https://drive.google.com/file/d/1WEb4OSUznn8polkQOHM0h7LRDm-fxKQE/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">1</span> Agregar el cupón en la factura</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Ir a Formas de Pago</strong>Con los productos ya cargados en la factura, hacer clic en <strong>Formas de Pago</strong>.</div></li>
+            <li><div class="step-body"><strong>Ingresar el código del cupón</strong>En el campo de cupón, escribir el código correspondiente al descuento (ej.: <code>5%OFFDESAU</code>) y confirmarlo.</div></li>
+            <li><div class="step-body"><strong>Esperar el diálogo de autorización</strong>Skylab mostrará automáticamente el cuadro <strong>"Ingrese Password de Autorización"</strong>. En este punto interviene el referente.</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">2</span> Autorización del referente</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>El referente ingresa su contraseña</strong>Solo el referente o encargado puede tipear la contraseña en el cuadro de diálogo. El vendedor debe cederle el equipo o llamarlo al sistema.</div></li>
+            <li><div class="step-body"><strong>Confirmar la autorización</strong>Al aceptar, el sistema aplica el descuento y continúa con la factura.</div></li>
+          </ol>
+          <div class="callout danger">
+            <span class="callout-icon">🚨</span>
+            <div class="callout-body"><strong>Importante</strong>Nunca compartir la contraseña del referente con el vendedor. La autorización debe realizarse en persona.</div>
+          </div>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">3</span> Cobro: solo efectivo</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>El sistema bloquea otros medios de pago</strong>Una vez aplicado el cupón con autorización, Skylab deshabilita automáticamente las tarjetas, QR y otros medios. Solo queda habilitado el <strong>efectivo</strong>.</div></li>
+            <li><div class="step-body"><strong>Cobrar el importe en efectivo</strong>Ingresar el monto recibido y finalizar la factura normalmente.</div></li>
+          </ol>
+          <div class="callout warn">
+            <span class="callout-icon">⚠️</span>
+            <div class="callout-body"><strong>Solo efectivo</strong>Las ventas con este tipo de cupón siempre se cobran en efectivo. No se puede combinar con tarjetas ni otros medios.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── SOP: NOTA DE CRÉDITO ── -->
+    <article id="nota-credito" class="page">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Operaciones de Caja<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Nota de Crédito Electrónica</div>
+      <div class="article-header">
+        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
+        <h1 class="article-title">Nota de Crédito Electrónica — Paso a Paso</h1>
+        <div class="article-meta">
+          <span>📄 Operaciones de Caja</span>
+          <span>👥 Toda la sucursal</span>
+          <span>🔑 Requiere autorización de administración</span>
+        </div>
+      </div>
+      <div class="sop-content">
+        <div class="callout info">
+          <span class="callout-icon">ℹ️</span>
+          <div class="callout-body"><strong>¿Cuándo se emite una Nota de Crédito?</strong><ul style="margin-top:6px;padding-left:18px;"><li>IMEI cruzado en la factura original</li><li>Arrepentimiento de compra del cliente</li><li>Cambio por falla del equipo</li></ul></div>
+        </div>
+        <div class="callout warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body"><strong>Siempre requiere autorización de administración</strong>Antes de emitir la NC, contactar a administración para solicitar la autorización. No se puede finalizar sin ese paso.</div>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">1</span> Acceder a N/Crédito</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Seleccionar el Punto de Venta</strong>En la barra de menús ir a <strong>SUCURSALES</strong> → provincia → punto de venta asignado. Asegurarse de <strong>NO</strong> elegir la opción que dice "Manual".</div></li>
+            <li><div class="step-body"><strong>Ir a N/Crédito</strong>En el menú FACTURACIÓN, seleccionar <strong>N/Crédito</strong>.</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">2</span> Completar datos del cliente</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Ingresar DNI, nombre y apellido</strong>Deben coincidir exactamente con los de la factura original.</div></li>
+            <li><div class="step-body"><strong>Completar teléfono y email</strong>Usar los mismos datos de la factura original cuando sea posible.</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">3</span> Vincular la factura original</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Usar "Traer Art. de Fact.N/NDeb.Nro"</strong>En el campo correspondiente, ingresar el número de la factura original. Los primeros 4 dígitos van en el primer cuadro y el resto en el segundo cuadro.</div></li>
+            <li><div class="step-body"><strong>Confirmar</strong>El sistema importará automáticamente los artículos de la factura original.</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">4</span> Solicitar autorización y guardar</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Contactar a administración</strong>Comunicarse con administración, dar el número de factura original y el motivo de la NC.</div></li>
+            <li><div class="step-body"><strong>Hacer clic en "Usar Autorización"</strong>Una vez que administración aprueba, hacer clic en el botón <strong>Usar Autorización</strong>.</div></li>
+            <li><div class="step-body"><strong>Guardar</strong>Hacer clic en <strong>Guardar</strong> para emitir la NC electrónica.</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">5</span> NC parcial (un solo producto)</h2>
+          <p>Si solo se necesita hacer la NC de un artículo específico y no de toda la factura:</p>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Eliminar los artículos que no cambian</strong>Después de importar la factura original, borrar los artículos que NO son parte de la devolución. Dejar solo el que sí se devuelve.</div></li>
+            <li><div class="step-body"><strong>Ajustar la forma de pago</strong>Modificar el monto para que coincida con el precio del producto de la NC.</div></li>
+            <li><div class="step-body"><strong>Autorización y guardar</strong>Igual que el paso 4: autorización de administración → Usar Autorización → Guardar.</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2>Después de la NC</h2>
+          <div class="ref-grid">
+            <div class="ref-card">
+              <div class="ref-label">IMEI cruzado</div>
+              <div class="ref-value">Re-facturar</div>
+              <div class="ref-sub">Emitir nueva factura con el IMEI correcto, mismo medio de pago.</div>
+            </div>
+            <div class="ref-card">
+              <div class="ref-label">Arrepentimiento / Falla</div>
+              <div class="ref-value">Devolver</div>
+              <div class="ref-sub">Devolver el importe al cliente por el mismo medio de pago de la compra original.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── SOP: FACTURACIÓN ── -->
+    <article id="facturacion" class="page">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Operaciones de Caja<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Facturación y Medios de Pago</div>
+      <div class="article-header">
+        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
+        <h1 class="article-title">Facturación y Medios de Pago</h1>
+        <div class="article-meta">
+          <span>🧾 Operaciones de Caja</span>
+          <span>👥 Toda la sucursal</span>
+        </div>
+      </div>
+      <div class="sop-content">
+        <div class="sop-section">
+          <h2><span class="sop-section-num">1</span> Factura Electrónica</h2>
+          <div class="callout info">
+            <span class="callout-icon">ℹ️</span>
+            <div class="callout-body">La factura electrónica es el comprobante estándar. Se puede reimprimir y reenviar por email. <strong>Siempre usarla cuando las condiciones lo permitan.</strong></div>
+          </div>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Seleccionar el Punto de Venta</strong>SUCURSALES → provincia → punto de venta asignado. No elegir la opción que dice "Manual".</div></li>
+            <li><div class="step-body"><strong>Ir a FACTURAS</strong>En el menú FACTURACIÓN, acceder a la sección FACTURAS.</div></li>
+            <li><div class="step-body"><strong>Completar datos del cliente</strong>DNI, nombre, apellido, teléfono y email son obligatorios. Para Factura A: agregar dirección, código postal, provincia y verificar que sea responsable inscripto.</div></li>
+            <li><div class="step-body"><strong>Agregar productos</strong>Celulares con IMEI: usar la pistola lectora en el campo IMEI para evitar cruces. Accesorios sin IMEI: ingresar en el campo ARTÍCULO y seleccionar de la lista.</div></li>
+            <li><div class="step-body"><strong>Agregar formas de pago</strong>Seleccionar FORMAS DE PAGO y elegir el método: efectivo, tarjeta o combinación. Completar los detalles según el medio elegido.</div></li>
+            <li><div class="step-body"><strong>Cobrar</strong>Con tarjeta: pasar el cobro por el posnet integrado antes de continuar. Con otros medios: seguir el procedimiento correspondiente.</div></li>
+            <li><div class="step-body"><strong>Revisar y confirmar</strong>Verificar que todos los datos estén correctos. Hacer clic en <strong>TERMINAR</strong> y luego en <strong>ENVIAR FACTURA</strong>.</div></li>
+            <li><div class="step-body"><strong>Imprimir o enviar por email</strong>Seleccionar EMAIL para enviar al cliente o PANTALLA para imprimir en el PDV.</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">2</span> Factura Manual (emergencia)</h2>
+          <div class="callout warn">
+            <span class="callout-icon">⚠️</span>
+            <div class="callout-body"><strong>Solo en casos excepcionales</strong>Usar únicamente cuando el sistema está caído, sin internet o hay corte de luz. Tiene la misma validez legal pero no se puede reimprimir.</div>
+          </div>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Tomar el talonario</strong>Usar el próximo número correlativo. Verificar que esté en blanco y autorizado.</div></li>
+            <li><div class="step-body"><strong>Completar datos del cliente y fecha</strong>Nombre completo o razón social, CUIT/CUIL o DNI, domicilio y condición ante el IVA.</div></li>
+            <li><div class="step-body"><strong>Detallar los productos</strong>Cantidad, descripción exacta, precio unitario y total. Para celulares: incluir el IMEI.</div></li>
+            <li><div class="step-body"><strong>Indicar la forma de pago</strong>Efectivo: anotar "EFECTIVO". Tarjeta: tipo, lote, cupón, cuotas y monto. Otros: detallar según corresponda.</div></li>
+            <li><div class="step-body"><strong>Entregar original al cliente</strong>La copia blanca es para el cliente. La amarilla o rosa queda archivada en el local.</div></li>
+            <li><div class="step-body"><strong>Cargar en sistema cuando se restituya</strong>Registrar la factura manual en la sección "Facturación Manual", con el mismo número de comprobante.</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">3</span> Medios de Pago</h2>
+          <h3>Efectivo y Transferencias</h3>
+          <p>Las transferencias requieren validación de administración antes de entregar el producto. El impacto puede demorar 48 a 72 hs. No entregar mercadería sin confirmación.</p>
+          <h3>Créditos bancarios</h3>
+          <p>Banco Columbia, Crédito Argentino, Santander Consumer y otros. El proceso se completa en la web de la entidad y luego se carga como forma de pago en la factura.</p>
+          <h3>Tarjetas — Posnet / Clover</h3>
+          <p>Aceptan todas las tarjetas habilitadas en el sistema. También aceptan billeteras digitales: MODO, BNA+, Cuenta DNI y Personal Pay.</p>
+          <h3>Tarjetas — GETPOS (GetNet)</h3>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Abrir "Payment App"</strong>Ingresar a la app de cobro del equipo GetPos.</div></li>
+            <li><div class="step-body"><strong>Deslizar o acercar la tarjeta</strong>Débito: pasar siempre por Posnet/Clover. Crédito: seleccionar "Plan GetNet".</div></li>
+            <li><div class="step-body"><strong>Elegir cuotas</strong>Sistema indica "Promo" → seleccionar <strong>SIN INTERÉS</strong>. Sin promo → seleccionar <strong>CON INTERÉS</strong>. Confirmar las cuotas elegidas por el cliente.</div></li>
+          </ol>
+          <div class="callout info">
+            <span class="callout-icon">ℹ️</span>
+            <div class="callout-body">Los bines para GetNet en el sistema son genéricos y compartidos en las condiciones comerciales del grupo.</div>
+          </div>
+          <h3>Pagos QR</h3>
+          <p>Se acepta QR por <strong>Posnet/Clover</strong> o por <strong>Mercado Pago integrado</strong>. No se acepta QR con GETPOS. Para Mercado Pago: colocar el bin de Mercado Pago QR y desmarcar la opción "Enviar a Posnet".</p>
+          <h3>Toma de equipos usados</h3>
+          <p>Exclusivo Riiing. El valor del usado se descuenta del precio del equipo nuevo al facturar.</p>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">4</span> Prevención de Fraude</h2>
+          <h3>Verificación de tarjeta</h3>
+          <ol class="steps">
+            <li><div class="step-body">Conservar la tarjeta del cliente hasta terminar el cobro.</div></li>
+            <li><div class="step-body">Solicitar documento de identidad y verificar que sea el titular.</div></li>
+            <li><div class="step-body">No aceptar tarjetas deterioradas, vencidas o con signos de adulteración.</div></li>
+            <li><div class="step-body">Controlar número de tarjeta, nombre del titular, fechas de vigencia, panel de firma y código de seguridad al dorso.</div></li>
+            <li><div class="step-body">Pedir al cliente que firme el ticket y verificar que la firma coincida con la de la tarjeta y el documento.</div></li>
+            <li><div class="step-body">Guardar copia del ticket por posibles disputas.</div></li>
+          </ol>
+          <h3>Verificación de documento</h3>
+          <div class="callout danger">
+            <span class="callout-icon">🚨</span>
+            <div class="callout-body"><strong>Solo DNI físico</strong>Está prohibida la venta con DNI digital. Siempre solicitar documento físico. Pedir que el cliente escriba su DNI en el cupón físico de la venta y verificar que coincida con el documento presentado.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── SOP: CIERRE DE CAJA ── -->
+    <article id="cierre-caja" class="page">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Operaciones de Caja<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Cierre de Caja</div>
+      <div class="article-header">
+        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
+        <h1 class="article-title">Cierre de Caja</h1>
+        <div class="article-meta">
+          <span>🔐 Operaciones de Caja</span>
+          <span>👥 Toda la sucursal</span>
+          <span>📅 Al final de cada turno</span>
+        </div>
+      </div>
+      <div class="sop-content">
+        <div class="callout info">
+          <span class="callout-icon">ℹ️</span>
+          <div class="callout-body"><strong>¿Para qué sirve?</strong>Controlar que los cobros del turno coincidan con lo registrado en el sistema. Permite detectar diferencias y asegura que todas las ventas estén reflejadas correctamente.</div>
+        </div>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;margin:20px 0;">
+          <iframe src="https://drive.google.com/file/d/18oHVafRGYmW6KO7h6wfr9khyJmVUWjNH/preview" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">1</span> Acceder al Cierre de Caja</h2>
+          <p>En el menú principal del sistema, hacer clic en el botón <strong>"Cierre de Caja"</strong>. Se abrirán cuatro secciones: Control de Efectivo, Cierres de Lote, Control de Facturas Manuales y Diferencias.</p>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">2</span> Control de Efectivo</h2>
+          <table class="data-table">
+            <thead><tr><th>Campo</th><th>¿Qué es?</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Saldo inicial</strong></td><td>Monto con el que se abrió caja (pendiente de depósito del día anterior).</td></tr>
+              <tr><td><strong>Efectivo facturado</strong></td><td>Suma del efectivo cobrado en ventas del turno.</td></tr>
+              <tr><td><strong>Retiros</strong></td><td>Total depositado en caja fuerte durante el turno.</td></tr>
+              <tr><td><strong>Efectivo facturas manuales</strong></td><td>Efectivo en el PDV correspondiente a facturas manuales no cargadas aún en sistema.</td></tr>
+              <tr><td><strong>Diferencia de caja</strong></td><td>Debe corresponder al efectivo en el PDV que todavía no fue retirado.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">3</span> Cierres de Lote (tarjetas)</h2>
+          <p>Para cada equipo de cobro ingresar: <strong>N° de lote</strong>, <strong>Cantidad de cupones</strong> e <strong>Importe total</strong>.</p>
+          <table class="data-table">
+            <thead><tr><th>Código sistema</th><th>Equipo</th><th>Cómo obtener el cierre</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">POSVX690</td><td>Posnet negro (integrado)</td><td>Imprimir cierre en el equipo. Copiar N° de lote, cant. cupones y monto total.</td></tr>
+              <tr><td class="mono">POSCLOVER</td><td>Clover</td><td>El N° de lote se verifica en un cupón impreso. Ingresar cantidad de cupones y total del resumen de ventas.</td></tr>
+              <tr><td class="mono">POSVIUMI</td><td>Viumi (Magicpos / Smartpos)</td><td>Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos.</td></tr>
+              <tr><td class="mono">POSGETNET / POSGETPOS</td><td>Getnet (Magicpos / Smartpos)</td><td>Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos.</td></tr>
+              <tr><td class="mono">POSOPENPAY</td><td>Openpay (Magicpos)</td><td>Sin cierre de lote: ingresar <strong>1</strong> en lote. Contar ventas manualmente y sumar los montos.</td></tr>
+            </tbody>
+          </table>
+          <div class="callout warn">
+            <span class="callout-icon">⚠️</span>
+            <div class="callout-body"><strong>Si hay más de un Posnet</strong>Cargar el cierre de cada equipo por separado. Si se realizaron varios cierres durante el turno, detallarlos todos.</div>
+          </div>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">4</span> Facturas Manuales no cargadas</h2>
+          <p>Listar todas las facturas manuales del turno que todavía <strong>no</strong> se cargaron en el sistema. Si ya se cargaron, no incluirlas.</p>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Tipo de comprobante</strong>Indicar si es Factura o Nota de Crédito.</div></li>
+            <li><div class="step-body"><strong>Tipo A o B</strong></div></li>
+            <li><div class="step-body"><strong>Punto de venta</strong>El que figura en el talonario manual.</div></li>
+            <li><div class="step-body"><strong>Número de comprobante</strong></div></li>
+            <li><div class="step-body"><strong>Importe total</strong></div></li>
+            <li><div class="step-body"><strong>Formas de pago</strong>Detallar con qué se cobró el comprobante.</div></li>
+          </ol>
+          <div class="callout warn">
+            <span class="callout-icon">⚠️</span>
+            <div class="callout-body"><strong>Notas de Crédito manuales</strong>El importe debe cargarse en <strong>negativo</strong> (con signo menos), ya que representa una devolución.</div>
+          </div>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">5</span> Diferencias y cómo resolverlas</h2>
+          <div class="ref-grid">
+            <div class="ref-card">
+              <div class="ref-label">Diferencia de efectivo</div>
+              <div class="ref-value">Verificar retiros</div>
+              <div class="ref-sub">Ocurre cuando se hizo un retiro físico a caja fuerte pero no se registró en el sistema.</div>
+            </div>
+            <div class="ref-card">
+              <div class="ref-label">Diferencia en cierres de lote</div>
+              <div class="ref-value">Revisar facturas</div>
+              <div class="ref-sub">Puede faltar detallar una factura manual o no se cargó el cierre de algún equipo de cobro.</div>
+            </div>
+          </div>
+          <div class="callout ok">
+            <span class="callout-icon">✅</span>
+            <div class="callout-body"><strong>¿Dudas?</strong>Cualquier consulta comunicarse con administración.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── SOP: GARANTÍA BOLSO PROTEGIDO ── -->
+    <article id="garantia-bolso" class="page">
+      <div class="breadcrumb"><a href="#" onclick="showPage('home');return false;">Inicio</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Seguros<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>Garantía Bolso Protegido</div>
+      <div class="article-header">
+        <div class="article-eyebrow">Procedimiento Operativo Estándar</div>
+        <h1 class="article-title">Garantía: Bolso Protegido</h1>
+        <div class="article-meta">
+          <span>👜 Seguros</span>
+          <span>👥 Toda la sucursal</span>
+        </div>
+      </div>
+      <div class="sop-content">
+        <div class="callout info">
+          <span class="callout-icon">ℹ️</span>
+          <div class="callout-body"><strong>¿Qué es el Bolso Protegido?</strong>Es una garantía exclusiva para bolsos y mochilas, disponible en 3 niveles: Bronce, Plata y Oro. Al facturarlo correctamente, Skylab imprime automáticamente el comprobante de garantía para el cliente.</div>
+        </div>
+        <h2>Códigos de sistema</h2>
+        <table class="data-table">
+          <thead><tr><th>Nivel</th><th>Código en Skylab</th></tr></thead>
+          <tbody>
+            <tr><td>🥉 Bronce</td><td class="mono">GTIA-BOLBRONCE</td></tr>
+            <tr><td>🥈 Plata</td><td class="mono">GTIA-BOLPLATA</td></tr>
+            <tr><td>🥇 Oro</td><td class="mono">GTIA-BOLORO</td></tr>
+          </tbody>
+        </table>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">1</span> Agregar la garantía junto con el bolso</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Agregar el bolso/mochila</strong>Cargar el producto en la factura normalmente.</div></li>
+            <li><div class="step-body"><strong>Agregar el código de garantía</strong>En el campo de artículo, ingresar el código correspondiente (ej.: <code>GTIA-BOLPLATA</code>) y seleccionarlo.</div></li>
+            <li><div class="step-body"><strong>Verificar la doble entrada</strong>El sistema debe mostrar el artículo de garantía <strong>dos veces</strong>: una con su precio y otra en <strong>$0</strong>. Ambas líneas son necesarias para que el comprobante de garantía se imprima.</div></li>
+          </ol>
+          <div class="callout danger">
+            <span class="callout-icon">🚨</span>
+            <div class="callout-body"><strong>Crítico: siempre debe aparecer dos veces</strong>Si la garantía figura solo una vez, el comprobante no se imprime y el cliente no tendrá cobertura activa. Verificar siempre antes de finalizar la factura.</div>
+          </div>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">2</span> Vender la garantía por separado</h2>
+          <ol class="steps">
+            <li><div class="step-body"><strong>Agregar el código de garantía</strong>Ingresar el código de garantía en la factura.</div></li>
+            <li><div class="step-body"><strong>Agregar también el producto asociado</strong>Es obligatorio incluir el bolso o mochila correspondiente en la misma factura. Sin él, la garantía no se activa correctamente.</div></li>
+            <li><div class="step-body"><strong>Verificar la doble entrada</strong>La garantía debe aparecer dos veces (precio + $0).</div></li>
+          </ol>
+        </div>
+        <div class="sop-section">
+          <h2><span class="sop-section-num">3</span> Entrega del comprobante</h2>
+          <p>Al finalizar la factura, Skylab imprimirá automáticamente el comprobante de garantía Bolso Protegido. Entregárselo al cliente junto con el ticket de compra.</p>
+          <div class="callout ok">
+            <span class="callout-icon">✅</span>
+            <div class="callout-body"><strong>Informar al cliente</strong>Explicarle que ese comprobante es la constancia de su garantía y que debe conservarlo para cualquier reclamo futuro.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- COMING SOON -->
     <article id="coming" class="page">
       <div class="article-header">
@@ -782,7 +1152,12 @@ const SOPS = [
   { id:'siniestros', title:'Siniestros — Seguro Sancor', icon:'🛡️', category:'Seguros', desc:'Proceso completo para gestionar el uso del seguro Sancor en sucursal, incluyendo la firma del recibo.', keywords:'siniestro seguro sancor garantia voucher recibo firma administracion descuento reparacion equipo' },
   { id:'prestamos', title:'Préstamos en Sucursal', icon:'💳', category:'Préstamos y Créditos', desc:'Cómo cargar un préstamo de financiera en el sistema y usarlo como medio de pago en la factura.', keywords:'prestamo credito financiera multiconsulta factura medio de pago aprobacion administracion cuotas' },
   { id:'auditoria', title:'Descargo de Auditoría', icon:'🔍', category:'Stock y Auditoría', desc:'Cómo leer la planilla de auditoría e impugnar diferencias de stock dentro de las 72 hs.', keywords:'auditoria descargo stock diferencia faltante sobrante planilla skylab inventario ajuste reset' },
-  { id:'pases', title:'Pases entre Sucursales', icon:'🔄', category:'Stock y Auditoría', desc:'Cómo confirmar pases recibidos de otras sucursales o depósito y qué hacer ante problemas.', keywords:'pase sucursal deposito transferencia stock mercaderia confirmar problema cantidad recibida' }
+  { id:'pases', title:'Pases entre Sucursales', icon:'🔄', category:'Stock y Auditoría', desc:'Cómo confirmar pases recibidos de otras sucursales o depósito y qué hacer ante problemas.', keywords:'pase sucursal deposito transferencia stock mercaderia confirmar problema cantidad recibida' },
+  { id:'cupon-descuento', title:'Cupón de Descuento con Autorización', icon:'🏷️', category:'Operaciones de Caja', desc:'Cómo aplicar el cupón de descuento con autorización del referente en Skylab y cobrar en efectivo.', keywords:'cupon descuento autorizacion referente skylab password efectivo forma de pago 5%OFFDESAU' },
+  { id:'nota-credito', title:'Nota de Crédito Electrónica', icon:'📄', category:'Operaciones de Caja', desc:'Paso a paso para emitir una NC por imei cruzado, arrepentimiento de compra o cambio por falla.', keywords:'nota credito nc electronica devolucion imei factura autorizacion administracion parcial' },
+  { id:'facturacion', title:'Facturación y Medios de Pago', icon:'🧾', category:'Operaciones de Caja', desc:'Cómo emitir facturas electrónicas y manuales y operar con todos los medios de pago disponibles.', keywords:'factura electronica manual tarjeta posnet clover getpos getnet viumi openpay qr transferencia credito efectivo dni verificacion fraude buenas practicas' },
+  { id:'cierre-caja', title:'Cierre de Caja', icon:'🔐', category:'Operaciones de Caja', desc:'Procedimiento completo al final del turno: control de efectivo, cierres de lote y facturas manuales.', keywords:'cierre caja efectivo lote cupon posnet clover viumi getnet openpay factura manual diferencia retiro' },
+  { id:'garantia-bolso', title:'Garantía Bolso Protegido', icon:'👜', category:'Seguros', desc:'Cómo agregar la garantía de bolso/mochila (Bronce, Plata, Oro) en Skylab y los códigos de sistema.', keywords:'garantia bolso mochila bronce plata oro GTIA-BOLBRONCE GTIA-BOLPLATA GTIA-BOLORO skylab factura doble imprimir' }
 ];
 
 function renderCards() {
