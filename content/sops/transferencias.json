@@ -10,6 +10,8 @@
   "restringido": false,
   "bloques": [
     { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿De qué trata este procedimiento?</strong>Cómo registrar una transferencia bancaria en el sistema de Riiing y utilizarla como medio de pago en la factura. La carga en el sistema es igual a la de los préstamos, pero con reglas propias: se pueden cargar varias transferencias en una misma factura y el titular de la cuenta no necesita coincidir con el titular de la factura." },
+    { "type": "titulo", "texto": "🎬 Video explicativo" },
+    { "type": "video", "url": "https://drive.google.com/file/d/1OBCiUDOasP0V5A5cuLV1xN7PEHD7JX0M/view" },
     { "type": "seccion", "numero": "", "titulo": "🏦 ¿A dónde debe transferir el cliente?" },
     { "type": "parrafo", "texto": "Datos de la cuenta para <strong>ventas de locales físicos</strong> (Banco Patagonia):" },
     { "type": "tarjetas", "items": [
