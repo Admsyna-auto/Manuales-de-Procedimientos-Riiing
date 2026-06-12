@@ -1,0 +1,31 @@
+{
+  "id": "transferencias",
+  "titulo": "Transferencias como Medio de Pago",
+  "titulo_corto": "Transferencias",
+  "icono": "💸",
+  "categoria": "Operaciones de Caja",
+  "descripcion": "Cómo cargar una transferencia bancaria en el sistema y usarla como medio de pago en la factura.",
+  "keywords": "transferencia bancaria medio de pago factura carga sistema aprobacion administracion comprobante cbu alias titular",
+  "meta": ["💸 Operaciones de Caja", "👥 Toda la sucursal", "🔑 Requiere validación de administración"],
+  "restringido": false,
+  "bloques": [
+    { "type": "aviso", "estilo": "info", "icono": "ℹ️", "texto": "<strong>¿De qué trata este procedimiento?</strong>Cómo registrar una transferencia bancaria en el sistema de Riiing y utilizarla como medio de pago en la factura. La carga en el sistema es igual a la de los préstamos, pero con reglas propias: se pueden cargar varias transferencias en una misma factura y el titular de la cuenta no necesita coincidir con el titular de la factura." },
+    { "type": "seccion", "numero": "1", "titulo": "Carga en el sistema — paso a paso" },
+    { "type": "parrafo", "texto": "El proceso es el mismo que para los préstamos:" },
+    { "type": "pasos", "items": [
+      { "titulo": "Registrar la transferencia en el sistema", "texto": "Desde el cuadro inicial (donde se abre caja), hacer clic en el botón <strong>\"Transferencias\"</strong>. Luego clic en el botón <strong>\"+\"</strong> y cargar los datos de la operación." },
+      { "titulo": "Solicitar validación a la Guardia de Administración", "texto": "Comunicarse con Administración para que verifiquen el ingreso del dinero. Una vez validada, se puede continuar." },
+      { "titulo": "Abrir la factura", "texto": "Con la transferencia validada, abrir la factura y cargar los datos del cliente, código de vendedor y productos como habitualmente." },
+      { "titulo": "Aplicar la transferencia como medio de pago", "texto": "Hacer clic en <strong>\"Forma de pago\"</strong>. Buscar el botón <strong>\"Transferencias\"</strong> en el extremo inferior derecho de la factura, seleccionarlo y aceptar. ¡Ya se puede cerrar la factura!" }
+    ]},
+    { "type": "seccion", "numero": "2", "titulo": "Diferencias con los préstamos" },
+    { "type": "tabla", "columnas": ["Regla", "Préstamos", "Transferencias"], "filas": [
+      { "celdas": ["¿Se puede usar más de uno en la misma factura?", "❌ No — solo un préstamo por factura", "✅ Sí — se pueden cargar varias transferencias"] },
+      { "celdas": ["¿El titular debe coincidir con el de la factura?", "✅ Sí — obligatorio", "❌ No es necesario que coincida"] }
+    ]},
+    { "type": "aviso", "estilo": "ok", "icono": "✅", "texto": "<strong>Combinable con otros medios</strong>Las transferencias se pueden combinar con efectivo, tarjetas y otros medios de pago en la misma factura." },
+    { "type": "seccion", "numero": "", "titulo": "⚠️ Importante" },
+    { "type": "aviso", "estilo": "warn", "icono": "⚠️", "texto": "<strong>No entregar mercadería sin confirmación</strong>Las transferencias requieren validación de Administración antes de entregar el producto. El impacto del dinero puede demorar entre <strong>48 y 72 hs</strong>. Nunca entregar la mercadería sin la confirmación del ingreso." },
+    { "type": "aviso", "estilo": "ok", "icono": "💬", "texto": "<strong>¿Dudas?</strong> Comunicarse con Administración." }
+  ]
+}
